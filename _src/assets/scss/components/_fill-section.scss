@@ -74,5 +74,11 @@
     width: 16px;
     height: 18px;
     font-weight: normal;
+    text-align: right;
+  }
+}
+@media all and (min-width: 768px) {
+  .section--fill {
+    width: 50%;
   }
 }
