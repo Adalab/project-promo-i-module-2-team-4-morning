@@ -1,9 +1,9 @@
 <section class="section--fill">
   <!-- Titulo de seccion -->
   <div class="title">
-    <i class="far fa-keyboard"></i>
-    <h3>Rellena</h3>
-    <div class="title--icon2"></div>
+    <span class="title--icon1"><i class="far fa-keyboard"></i></span>
+    <h3 class="title--text">Rellena</h3>
+    <span class="title--icon2"><i class="fas fa-angle-up"></i></span>
   </div>
   <!-- Formulario -->
   <form class="form" action="/signup" method="post">
@@ -27,8 +27,10 @@
     />
     <!-- Boton para subir imagen -->
     <label for="form--img">Imagen de perfil</label>
-    <button class="form--button">Añadir imagen</button>
-    <span class="form--button__box"></span>
+    <div class="form--button__container">
+      <button class="form--button">Añadir imagen</button>
+      <span class="form--button__box"></span>
+    </div>
     <!-- Correo electronico -->
     <label for="form--email">Email</label>
     <input
