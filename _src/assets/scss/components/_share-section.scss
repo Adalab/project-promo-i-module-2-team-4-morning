@@ -1,0 +1,55 @@
+.section--share {
+  padding: 20px;
+}
+
+.share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  &--icon1 {
+    color: $color-secondary-dark;
+    width: 21px;
+    height: 18px;
+  }
+  &--text {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    color: #54585a;
+    position: absolute;
+    left: 51px;
+  }
+  &--icon2 {
+    color: #54585a;
+    width: 16px;
+    height: 18px;
+    font-weight: normal;
+    text-align: right;
+  }
+
+  &--button {
+    width: 199px;
+    height: 30px;
+    background-color: $color-secondary-dark;
+    color: $color-secondary-light;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    height: 50px;
+    border: 0px;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    margin-right: 20px;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      margin-bottom: 20px;
+    }
+  }
+}
