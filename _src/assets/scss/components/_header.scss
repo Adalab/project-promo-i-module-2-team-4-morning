@@ -1,5 +1,16 @@
-.page__header {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+.header{
+  padding: 31px 79px 30px 40px;
+  &__logo{
+    width: 201px;
+    height: 50px;
+    .logo{
+      width: 100%;
+    }
+  }
+  @media all and (min-width: 768px){
+    padding-right: 527px;
+  }
+  @media all and (min-width: 1024px){
+    padding-right: 783px;
+  }
 }
