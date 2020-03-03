@@ -21,12 +21,12 @@
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
-    color: #54585a;
+    color: $color-text-dark;
     position: absolute;
     left: 51px;
   }
   &--icon2 {
-    color: #54585a;
+    color: $color-text-dark;
     width: 16px;
     height: 18px;
     font-weight: normal;
@@ -54,20 +54,79 @@
       margin-top: 7px;
       margin-bottom: 20px;
       padding-bottom: 30px;
-      border-bottom: 1px solid #d8d8d8;
+      border-bottom: 1px solid $color-text-medium;
     }
   }
 }
 .fa-address-card {
-  color: white;
+  color: $color-secondary-light;
 }
 
 .fa-share-alt {
   margin: 0 12px 0 0;
 }
 
+.button--grey {
+  background-color: #d5d5d5;
+}
+
 @media all and (min-width: 768px) {
   .section--share {
     width: 50%;
+  }
+}
+
+.share--tarjeta--creada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $color-text-medium;
+  margin-bottom: 20px;
+  padding-bottom: 37px;
+
+  &--text {
+    font-size: 18px;
+    color: $color-text-dark;
+    width: 219px;
+    height: 24px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  &--button {
+    color: $color-secondary-light;
+    background-color: #00a0f5;
+    font-size: 14px;
+    line-height: 20px;
+    width: 181px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--awesome-prof {
+    width: 292px;
+    height: 17px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: orange;
+    margin-bottom: 10px;
   }
 }
