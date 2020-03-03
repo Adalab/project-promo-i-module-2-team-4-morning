@@ -1,0 +1,123 @@
+.landing {
+  display: flex;
+  background-color: #f5f5f5;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid#d8d8d8;
+  &--logo {
+    width: 250px;
+    height: 53px;
+    margin: 95px auto 35.4px auto;
+  }
+  &--title {
+    color: $color-secondary-dark;
+    font-size: 19.2px;
+    font-family: $font-terciary;
+    font-weight: 900;
+  }
+  &--text {
+    width: 264.8px;
+    color: $color-primary-dark;
+    font-size: 12.8px;
+    text-align: center;
+    font-family: $font-primary$font-primary;
+    font-weight: 400;
+    margin: 0px auto 17.8px auto;
+  }
+  &--rectangle {
+    width: 268px;
+    height: 73.8px;
+    border: 1.6px solid rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+    margin: 0px auto 38.6px auto;
+  }
+  &--list {
+    height: 73.8px;
+    display: flex;
+    flex-direction: row;
+    color: $color-secondary-dark;
+    text-decoration: none;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    &__item {
+      display: flex;
+      width: 60px;
+      height: 48.8px;
+      text-align: center;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+    &__icon {
+      color: $color-secondary-dark;
+      font-size: 22.4px;
+    }
+    &__link {
+      text-decoration: none;
+      color: $color-text-dark;
+      font-size: 12.8px;
+      font-family: $font-primary;
+      font-weight: 400;
+    }
+  }
+  &--button {
+    width: 129px;
+    height: 42px;
+    border-radius: 21px;
+    background: $color-primary-medium;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-decoration-style: none;
+    color: $color-secondary-light;
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px auto 30px auto;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .landing {
+    &--button {
+      margin: 0px auto 59px auto;
+    }
+    &--logo {
+      width: 419px;
+      height: 103px;
+      margin: 350px auto 31px auto;
+    }
+    &--title {
+      font-size: 24px;
+    }
+    &--text {
+      width: 331px;
+      font-size: 16px;
+      margin: 0px auto 27px auto;
+    }
+    &--rectangle {
+      width: 325px;
+      height: 86px;
+      border: 2px solid rgba(225, 115, 52, 0.21);
+      border-radius: 5px;
+      margin-bottom: 186px;
+    }
+    &--list {
+      height: 86px;
+      &__item {
+        width: 75px;
+        height: 61px;
+      }
+      &__icon {
+        font-size: 28px;
+      }
+      &__link {
+        font-size: 16px;
+      }
+    }
+    &--button {
+      margin-bottom: 59px;
+    }
+  }
+}

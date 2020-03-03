@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--title {
+    color: #6b6b6b;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 18px 0px 12px 0px;
+  }
+  &--logo {
+    width: 103px;
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    &--title {
+      margin: 18px 0px 22px 41px;
+    }
+    &--logo {
+      width: 103px;
+      margin: 10px 40px 10px 0px;
+    }
+  }
+}
