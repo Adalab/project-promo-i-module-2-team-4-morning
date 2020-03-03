@@ -15,6 +15,9 @@
     &__link2,
     &__link3,
     &__link4 {
+      &:hover {
+        background-color: $color-primary-light;
+      }
     }
   }
 }
