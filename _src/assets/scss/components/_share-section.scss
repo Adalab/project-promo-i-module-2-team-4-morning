@@ -46,6 +46,9 @@
     border-radius: 12px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     margin-right: 20px;
+    &:hover {
+      background-color: #d5d5d5;
+    }
 
     &__container {
       display: flex;
@@ -68,9 +71,9 @@
 
 // Parte desplegada
 
-.button--grey {
-  background-color: #d5d5d5;
-}
+// .button--grey {
+// ;
+// }
 
 .share--card--created {
   display: flex;
