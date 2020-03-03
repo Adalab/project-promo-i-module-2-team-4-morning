@@ -3,6 +3,7 @@
   &--container__1 {
     display: flex;
     margin-bottom: 30px;
+    justify-content: space-between;
   }
   &--logo-design {
     width: 21px;
@@ -16,6 +17,8 @@
     font-weight: 600;
     color: $color-text-dark;
     text-transform: uppercase;
+    position: absolute;
+    left: 61px;
   }
   &--logo-angleup {
     width: 16px;
@@ -26,6 +29,7 @@
     display: flex;
     border-bottom: 1px solid $color-text-medium;
     padding-bottom: 30px;
+    justify-content: space-around;
   }
   &--subtitle{
     margin-right: 82px;
