@@ -4,6 +4,10 @@
   padding: 20px;
   width: 100%;
 }
+.hidden {
+  // display: none;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,9 @@
     font-weight: normal;
     text-align: right;
   }
+}
+.fas.fa-angle-up.closed {
+  transform: rotate(180deg);
 }
 @media all and (min-width: 768px) {
   .section--fill {
