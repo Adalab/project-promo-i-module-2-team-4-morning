@@ -1,10 +1,102 @@
-.design{
-    &__logo--design{
-       width: 21px;
-       height: 18px; 
+.design {
+  padding: 20px 30px 20px 30px;
+  &--container__1 {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &--logo-design {
+    width: 21px;
+    height: 18px;
+    color: $color-secondary-dark;
+  }
+  &--title{
+    margin: 0 168px 0 10px;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-text-dark;
+    text-transform: uppercase;
+  }
+  &--logo-angleup {
+    width: 16px;
+    height: 18px;
+    color: $color-text-dark;
+  }
+  &--container__2 {
+    display: flex;
+    border-bottom: 1px solid $color-text-medium;
+    padding-bottom: 30px;
+  }
+  &--subtitle{
+    margin-right: 82px;
+    font-family: $font-primary;
+    font-size: 14px;
+    color: $color-text-dark;
+    text-transform: uppercase;
+  }
+  &--form{
+    display: flex;
+    flex-direction: column;
+    &__item{
+      display: flex;
+      margin-bottom: 20px;
     }
-    &__logo--angleup{
-        width: 16px;
-        height: 18px;
+  }
+  &--palette1,
+  &--palette2,
+  &--palette3{
+    display: flex;
+    margin-left: 10px;
+  }
+  &--palette1 {
+    &__colorA {
+      width: 30px;
+      height: 25px;
+      background-color: #114e4e;
     }
+    &__colorB {
+      width: 30px;
+      height: 25px;
+      background-color: #438792;
+    }
+    &__colorC {
+      width: 30px;
+      height: 25px;
+      background-color: #a2deaf;
+    }
+  }
+  &--palette2 {
+    &__colorA {
+      width: 30px;
+      height: 25px;
+      background-color: #420101;
+    }
+    &__colorB {
+      width: 30px;
+      height: 25px;
+      background-color: #bd1010;
+    }
+    &__colorC {
+      width: 30px;
+      height: 25px;
+      background-color: #e95626;
+    }
+  }
+  &--palette3 {
+    &__colorA {
+      width: 30px;
+      height: 25px;
+      background-color: #3e5b65;
+    }
+    &__colorB {
+      width: 30px;
+      height: 25px;
+      background-color: #eab052;
+    }
+    &__colorC {
+      width: 30px;
+      height: 25px;
+      background-color: #a0c0cf;
+    }
+  }
 }
