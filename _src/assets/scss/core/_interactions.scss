@@ -1,0 +1,10 @@
+.card-sample--button {
+  &:hover {
+    background-color: $color-secondary-light;
+    transform: scale(1.1);
+  }
+  &:active {
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
