@@ -66,17 +66,13 @@
   margin: 0 12px 0 0;
 }
 
+// Parte desplegada
+
 .button--grey {
   background-color: #d5d5d5;
 }
 
-@media all and (min-width: 768px) {
-  .section--share {
-    width: 50%;
-  }
-}
-
-.share--tarjeta--creada {
+.share--card--created {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +122,13 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: orange;
+    color: #e17334;
     margin-bottom: 10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .section--share {
+    width: 50%;
   }
 }
