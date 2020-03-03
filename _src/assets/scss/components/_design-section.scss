@@ -7,20 +7,32 @@
   &--logo-design {
     width: 21px;
     height: 18px;
-    color: #e17334;
+    color: $color-secondary-dark;
   }
   &--title{
     margin: 0 168px 0 10px;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-text-dark;
+    text-transform: uppercase;
   }
   &--logo-angleup {
     width: 16px;
     height: 18px;
+    color: $color-text-dark;
   }
   &--container__2 {
     display: flex;
+    border-bottom: 1px solid $color-text-medium;
+    padding-bottom: 30px;
   }
   &--subtitle{
     margin-right: 82px;
+    font-family: $font-primary;
+    font-size: 14px;
+    color: $color-text-dark;
+    text-transform: uppercase;
   }
   &--form{
     display: flex;
