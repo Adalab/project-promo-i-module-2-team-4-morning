@@ -1,5 +1,9 @@
 .design {
-  padding: 20px 30px 20px 30px;
+  padding: 30px 20px 30px 20px;
+  @media all and(min-width:768px){
+    padding-left: 30px;
+    padding-right: 40px;
+  }
   &--container__1 {
     display: flex;
     margin-bottom: 30px;
@@ -11,7 +15,7 @@
     color: $color-secondary-dark;
   }
   &--title{
-    margin: 0 168px 0 10px;
+    margin: -3px 168px 0 10px;
     font-family: $font-primary;
     font-size: 18px;
     font-weight: 600;
@@ -37,6 +41,9 @@
     font-size: 14px;
     color: $color-text-dark;
     text-transform: uppercase;
+    @media all and(min-width:768px){
+      margin-right: 151px;
+    }
   }
   &--form{
     display: flex;
@@ -103,4 +110,8 @@
       background-color: #a0c0cf;
     }
   }
-}
+  @media all and (min-width: 768px) {
+          width: 50%;
+    }
+  }
+
