@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Profile Awesome Cards</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900&display=swap');
+        </style>
+        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+        rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <img class="logo" src="./assets/images/logo-awesome-profile-cards.svg"
+                alt="Awesome profile cards" />
+            </div>
+        </header>
+        <main>
+            <section>
+                <section class="card-sample">
+                    <div class="card-sample--container">
+                        <button class="card-sample--button"><i class="far fa-trash-alt"></i> Reset</button>
+                        <div class="card-sample--card">
+                             <h2 class="card-sample--card__title">Nombre Apellido</h2> 
+                             <h3 class="card-sample--card__subtitle">Front-end developer</h3> 
+                            <img src="http://via.placeholder.com/240x200" alt="imagen de ejemplo"
+                            />
+                            <div class="card-sample--item"> <a class="card-sample--item__link1" href="#"><i class="fas fa-mobile-alt"></i></a> 
+                            </div>
+                            <div class="card-sample--item"> <a class="card-sample--item__link2" href="#"><i class="far fa-envelope"></i></a> 
+                            </div>
+                            <div class="card-sample--item"> <a class="card-sample--item__link3" href="#"><i class="fab fa-linkedin-in"></i></a> 
+                            </div>
+                            <div class="card-sample--item"> <a class="card-sample--item__link4" href="#"><i class="fab fa-github-alt"></i></a> 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="design">
+                <div class="design__container--1">
+                    <div class="design__logo--design"> <i class="far fa-object-ungroup"></i> 
+                    </div>
+                    <p class="design__title">Diseña</p>
+                    <div class="design__logo--angleup"> <i class="fas fa-angle-up"></i> 
+                    </div>
+                </div>
+                <div class="design__container--2">
+                    <p class="design__subtitle">Colores</p>
+                    <form class="design__form" action="" method="GET">
+                        <div class="design__form--item1">
+                            <input type="radio" />
+                            <div class="design__color-palette--1">
+                                <div class="color-a"></div>
+                                <div class="color-b"></div>
+                                <div class="color-c"></div>
+                            </div>
+                        </div>
+                        <div class="dessign__form--item2">
+                            <input type="radio" />
+                            <div class="design__color-palette--2">
+                                <div class="color-d"></div>
+                                <div class="color-e"></div>
+                                <div class="color-f"></div>
+                            </div>
+                        </div>
+                        <div class="dessign__form--item3">
+                            <input type="radio" />
+                            <div class="design__color-palette--3">
+                                <div class="color-g"></div>
+                                <div class="color-h"></div>
+                                <div class="color-i"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section--fill">
+                <!-- Titulo de seccion -->
+                <div class="title"> <span class="title--icon1"><i class="far fa-keyboard"></i></span> 
+                     <h3 class="title--text">Rellena</h3>  <a class="title--icon2"><i class="fas fa-angle-up"></i></a> 
+                </div>
+                <!-- Formulario -->
+                <form class="form" action="/signup" method="post">
+                    <!-- Nombre -->
+                    <label for="form--name">Nombre completo</label>
+                    <input id="form--name" type="text" name="form--name"
+                    placeholder="Ej: Sally Jill" required />
+                    <!-- Puesto -->
+                    <label for="form--job">Puesto</label>
+                    <input id="form--job" type="text" name="form--job" placeholder="Ej: Front-end unicorn"
+                    required />
+                    <!-- Boton para subir imagen -->
+                    <label for="form--img">Imagen de perfil</label>
+                    <div class="form--button__container">
+                        <button class="form--button">Añadir imagen</button> <span class="form--button__box"></span> 
+                    </div>
+                    <!-- Correo electronico -->
+                    <label for="form--email">Email</label>
+                    <input type="email" id="form--email" name="form--email" placeholder="Ej: sally-hill@gmail.com"
+                    required />
+                    <!-- Telefono -->
+                    <label for="form--phone">Teléfono</label>
+                    <input type="tel" id="form--phone" name="form--phone"
+                    placeholder="555-55-55-55" />
+                    <!-- Linkedin -->
+                    <label for="form--linkedin">Linkedin</label>
+                    <input id="form--linkedin" type="text" name="form--linkedin"
+                    placeholder="Ej: linkedin.com/in/sally.hill" required />
+                    <label for="form--job">Github</label>
+                    <input id="form--github" type="text" name="form--github"
+                    placeholder="Ej: @sally-hill" required />
+                </form>
+            </section>
+            <!-- <div class="card-sample--item">           <a class="card-sample--item__link3" href="#"><i class="fab fa-linkedin-in"></i></a>         </div>         <div class="card-sample--item">           <a class="card-sample--item__link4" href="#"><i class="fab fa-github-alt"></i></a>         </div> -->
+            <section></section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="footer--title"> <small>         Awesome profile-cards @2018       </small> 
+                </div>
+                <div>
+                    <img class="footer--logo" src="./assets/images/logo-adalab.png" alt=""
+                    />
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
