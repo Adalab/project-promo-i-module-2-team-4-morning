@@ -1,8 +1,8 @@
 .design {
   padding: 30px 20px 30px 20px;
   @media all and(min-width:768px){
-    padding-left: 30px;
-    padding-right: 40px;
+    padding-left: 40px;
+    padding-right: 30px;
   }
   &--container__1 {
     display: flex;
@@ -15,7 +15,7 @@
     color: $color-secondary-dark;
   }
   &--title{
-    margin: -3px 168px 0 10px;
+    margin: -3px 0 0 -10px;
     font-family: $font-primary;
     font-size: 18px;
     font-weight: 600;
@@ -23,6 +23,9 @@
     text-transform: uppercase;
     position: absolute;
     left: 61px;
+    @media all and(min-width:768px){
+      margin-left: 10px;
+    }
   }
   &--logo-angleup {
     width: 16px;
@@ -32,17 +35,17 @@
   &--container__2 {
     display: flex;
     border-bottom: 1px solid $color-text-medium;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     justify-content: space-between;
   }
   &--subtitle{
-    margin-right: 82px;
+    margin-left: 19px;
     font-family: $font-primary;
     font-size: 14px;
     color: $color-text-dark;
     text-transform: uppercase;
     @media all and(min-width:768px){
-      margin-right: 151px;
+      margin: 0;
     }
   }
   &--form{
