@@ -1,101 +1,79 @@
 ![Adalab](_src/assets/images/logo-adalab-80px.png)
 
-# Adalab web starter kit
+# Awesome Profile-Cards
 
-Ahoy! Esta es nuestro Starter Kit en node/gulp para este primer contacto con el desarrollo web
-Incluye SCSS, un sistema de plantillas HTML y un web server.
+Awesome Profile-Cards es una aplicación web que nos permite crear una tarjeta de visita personalizada de forma instantanea.
 
-## Guía de inicio rápido
+## Cómo funciona
 
-Necesitarás instalar [Node.js](https://nodejs.org/) y [Gulp](https://gulpjs.com) para trabajar con este Starter Kit, luego:
+Necesitarás acceder a [nuestra web](https://nodejs.org/), leer las instrucciones y comenzar a personalizar tu tarjeta.
 
-1. Descarga o clona el repositorio
-2. Instala las dependencias locales con `npm install`
-3. Arranca el kit con `gulp`
+1. Selecciona qué colores quieres que predominen en el diseño
+2. Rellena tus datos, ¡no te olvides de comprobar que son los correctos!
+3. Añade tu mejor foto
+4. ...Y tus redes sociales para que puedan encontrarte
+5. ¿Listo? Comparte tu tarjeta mediante un link o directamente a través de Twitter
 
-## Espera, ¿esto se hace siempre?
+## ¿Quieres saber más sobre cada sección?
 
-> ### Solo una vez al principio en cada ordenador que utilicemos:
+> ### Diseña:
 
-- Instalamos node
-- Instalamos el comando de gulp de forma global para poder usarlo desde cualquier carpeta usando `npm install --global gulp-cli`
+- Nuestro equipo de diseñadores ha elegido los colores que mejor se adaptan para cada tipo de situación (grandes empresas, tarjeta personal, freelancer,...). Selecciona qué gama cromatica quieres que te identifique y visualizalo en tiempo real en la vista preeliminar.
 
-> ### Cada vez que descarguemos o clonemos un repo:
+> ### Rellena
 
-- `npm install` para instalar los paquetes necesarios para convertir Sass a CSS, minizarlo, etc.
+- Para que otros puedan contactarte, rellena todos los datos que quieras que aparezcan en tu tarjeta. No te olvides de tu sitio web y redes sociales, son los primeros canales de toma de contacto a los que accederan tus clientes potenciales. Añade tu mejor foto para que todo el mundo sepa quién eres y no haya confusiones. Comprueba siempre tus datos de contacto en la vista preeliminar.
 
-> ### Cada vez que estemos trabajando con nuestro código:
+> ### Comparte
 
-- Desde nuestra terminal, ejecutamos el comando `gulp` para que realice la tarea por defecto, que en el caso del `gulpfile.js` que tenemos en adalab-web-starter-kit estará pendiente de nuestros archivos Sass, html y JavaScript y los compilará, minificará y/o recargará el servidor cada vez que hagamos un cambio
+- Una vez terminada tu tarjeta guarda tus cambios. Nuestra app generará un link único para tu tarjeta que podrás compartir donde quieras.
 
-## Tareas de gulp incluidas
+## El proyecto
 
-### Inicio de un web server para desarrollo
-
-```
-npm start
-```
-
-o lo que en este proyecto es lo mismo:
-
-```
-gulp
-```
-
-Lanza un webserver con BrowserSync y varios watchers estarán pendientes de los archivos SCSS/JS/HTML, en la carpeta **public/**, para recargar el navegador cuando se necesite.
-
-### Versión lista para subir a producción
-
-Para generar los ficheros para producción ejecuta:
-
-```
-npm run docs
-```
-
-o lo que en este proyecto es lo mismo:
-
-```
-gulp docs
-```
-
-En la carpeta **docs/** se generarán los CSS y JS minimizados y sin sourcemaps listos para subir al repo. A continuación súbelos al repo y activa en GitHub Pages la opción **master/docs/**, para que GitHub Pages sirva la página desde la carpeta **docs/**.
-
----
-
-Si quieres generar los ficheros listos para producción y además subirlos a GitHub directamente ejecuta el siguiente comando:
-
-```
-npm run push-docs
-```
-
-Este comando borra la carpeta **docs/**, la vuelve a generar, crea un commit con los nuevos ficheros y hace un `git push`, todo del tirón. ¿Cómo se te queda el cuerpo?. Si quieres saber cómo funciona échale un ojo al fichero `package.json`.
-
-## Flujo de archivos con gulp
-
-Estas tareas de gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
+A continuación se muestra cómo se ha realizado la web.
 
 ## Estructura del proyecto
 
 Nuestro **gulpfile.js** usa un JSON de configuración con las rutas de los archivos a generar/vigilar.
 
-La estructura de carpetas tiene esta pinta:
+La estructura de carpetas:
 
 ```
 /
 `- _src
    |- api
-   |  |- data.json // para crearnos un servidor de datos local
+   |  |- data.json
    |- assets
    |  |- icons
    |  |- images
    |  |- js
    |  `- scss
    |     `- core
+   |        |- variables
+   |        |- reset
+   |         |- interactions
+   |
+   |- components
+   |     |- preview-section
+   |     |- main-landing
+   |     |- main-app
+   |     |- design-section
+   |     |- fill-section
+   |     |- share-section
+   |     |- footer
    |
    `- templates
+      `- index
+      `- app
       `- partials
+         |- header
+         |- preview-section
+         |- main-landing
+         |- main-app
+         |- design-section
+         |- fill-section
+         |- share-section
+         |- footer
 
 ```
 
