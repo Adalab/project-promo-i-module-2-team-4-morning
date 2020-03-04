@@ -34,8 +34,6 @@ A continuación se muestra cómo se ha realizado la web.
 
 ## Estructura del proyecto
 
-Nuestro **gulpfile.js** usa un JSON de configuración con las rutas de los archivos a generar/vigilar.
-
 La estructura de carpetas:
 
 ```
