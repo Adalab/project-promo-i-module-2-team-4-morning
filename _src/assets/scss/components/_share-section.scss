@@ -4,12 +4,16 @@
   flex-direction: column;
   width: 100%;
 }
+// .hidden {
+// display: none;
+// }
 
 .share {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
+  font-size: 18px;
 
   &--icon1 {
     color: $color-secondary-dark;
@@ -70,6 +74,9 @@
 
 .fa-share-alt {
   margin: 0 12px 0 0;
+}
+.fas fa-angle-up {
+  transform: rotate(180deg);
 }
 
 // Parte desplegada
@@ -133,5 +140,6 @@
 @media all and (min-width: 768px) {
   .section--share {
     width: 50%;
+    padding: 30px;
   }
 }
