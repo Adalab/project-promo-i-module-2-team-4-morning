@@ -71,7 +71,7 @@
     &__colorB {
       width: 30px;
       height: 25px;
-      background-color: #438792;
+      background-color: #86a1a5;
     }
     &__colorC {
       width: 30px;
@@ -114,4 +114,45 @@
     }
   }
   }
+// Colores para la preview por paleta
+.title--palette-1{
+  background-color: #114e4e;
+  border-left: #438792;
+}
 
+.title--palette-2{
+  background-color: #420101;
+  border-left: #bd1010;
+}
+
+.title--palette-3{
+  background-color: #3e5b65;
+  border-left: #eab052;
+}
+
+.subtitle--palette-1{
+  border-left: #86a1a5
+}
+
+.subtitle--palette-2{
+  border-left: #bd1010
+}
+
+.subtitle--palette-3{
+  border-left: #eab052
+}
+
+.link--palette-1{
+  color: #114e4e;
+  border: #a2deaf;
+}
+
+.link--palette-2{
+  color: #420101;
+  border: #e95626;
+}
+
+.link--palette-3{
+  color: #3e5b65;
+  border: #a0c0cf;
+}
