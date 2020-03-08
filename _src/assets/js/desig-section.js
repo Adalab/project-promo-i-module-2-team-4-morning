@@ -11,12 +11,6 @@ function handlePreviewCard(event) {
   const currentTarget = event.currentTarget;
   if (currentTarget.classList.contains("js-radio-design-palette-1")) {
     console.log("Han seleccionado la paleta 1");
-<<<<<<< HEAD
-  } else if (currentTarget.classList.contains("js-radio-design-palette-2")) {
-    console.log("Han seleccionado la paleta 2");
-  } else if (currentTarget.classList.contains("js-radio-design-palette-3")) {
-    console.log("Han seleccionado la paleta 3");
-=======
     addPalette1();
   } else if (currentTarget.classList.contains("js-radio-design-palette-2")) {
     console.log("Han seleccionado la paleta 2");
@@ -24,7 +18,6 @@ function handlePreviewCard(event) {
   } else if (currentTarget.classList.contains("js-radio-design-palette-3")) {
     console.log("Han seleccionado la paleta 3");
     addPalette3();
->>>>>>> GriseJS
   }
 }
 
@@ -34,16 +27,6 @@ selectPalette3.addEventListener("change", handlePreviewCard);
 
 //styles preview card
 
-<<<<<<< HEAD
-// Rellena section
-
-const nameBtn = document.querySelector(".js-fill-name");
-console.log(nameBtn);
-
-function changeCardInfo() {}
-
-nameBtn.addEventListener("click", changeCardInfo);
-=======
 const titleCard = document.getElementsByClassName(
   "js-card-sample--card__title"
 );
@@ -83,4 +66,3 @@ function addPalette3() {
   linksCard.add("link--palette-3");
   linksCard.remove("link--palette-1", "link--palette-2");
 }
->>>>>>> GriseJS
