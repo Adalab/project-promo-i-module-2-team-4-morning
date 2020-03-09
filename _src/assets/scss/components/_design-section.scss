@@ -1,12 +1,11 @@
 .design {
-  padding: 30px 20px 30px 20px;
-  @media all and(min-width:768px){
-    padding-left: 40px;
+  padding-top: 30px;
+  @media all and(min-width:768px) {
     padding-right: 30px;
   }
   &--container__1 {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     justify-content: space-between;
   }
   &--logo-design {
@@ -14,7 +13,7 @@
     height: 18px;
     color: $color-secondary-dark;
   }
-  &--title{
+  &--title {
     margin: -3px 0 0 -10px;
     font-family: $font-primary;
     font-size: 18px;
@@ -23,7 +22,7 @@
     text-transform: uppercase;
     position: absolute;
     left: 61px;
-    @media all and(min-width:768px){
+    @media all and(min-width:768px) {
       margin-left: 10px;
     }
   }
@@ -31,34 +30,36 @@
     width: 16px;
     height: 18px;
     color: $color-text-dark;
+    text-align: right;
   }
   &--container__2 {
     display: flex;
     border-bottom: 1px solid $color-text-medium;
     padding-bottom: 15px;
+    padding-top: 22px;
     justify-content: space-between;
   }
-  &--subtitle{
+  &--subtitle {
     margin-left: 19px;
     font-family: $font-primary;
     font-size: 14px;
     color: $color-text-dark;
     text-transform: uppercase;
-    @media all and(min-width:768px){
+    @media all and(min-width:768px) {
       margin: 0;
     }
   }
-  &--form{
+  &--form {
     display: flex;
     flex-direction: column;
-    &__item{
+    &__item {
       display: flex;
       margin-bottom: 20px;
     }
   }
   &--palette1,
   &--palette2,
-  &--palette3{
+  &--palette3 {
     display: flex;
     margin-left: 10px;
   }
@@ -113,46 +114,46 @@
       background-color: #a0c0cf;
     }
   }
-  }
+}
 // Colores para la preview por paleta
-.title--palette-1{
+.title--palette-1 {
   background-color: #114e4e;
   border-left: #438792;
 }
 
-.title--palette-2{
+.title--palette-2 {
   background-color: #420101;
   border-left: #bd1010;
 }
 
-.title--palette-3{
+.title--palette-3 {
   background-color: #3e5b65;
   border-left: #eab052;
 }
 
-.subtitle--palette-1{
-  border-left: #86a1a5
+.subtitle--palette-1 {
+  border-left: #86a1a5;
 }
 
-.subtitle--palette-2{
-  border-left: #bd1010
+.subtitle--palette-2 {
+  border-left: #bd1010;
 }
 
-.subtitle--palette-3{
-  border-left: #eab052
+.subtitle--palette-3 {
+  border-left: #eab052;
 }
 
-.link--palette-1{
+.link--palette-1 {
   color: #114e4e;
   border: #a2deaf;
 }
 
-.link--palette-2{
+.link--palette-2 {
   color: #420101;
   border: #e95626;
 }
 
-.link--palette-3{
+.link--palette-3 {
   color: #3e5b65;
   border: #a0c0cf;
 }
