@@ -1,10 +1,11 @@
 .section--share {
   padding-bottom: 20px;
-  padding-right: 30px;
+  // padding-right: 30px;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-top: 1px solid $color-text-medium;
 }
 
 .share {
@@ -19,7 +20,7 @@
     height: 18px;
   }
   &--text {
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
@@ -40,7 +41,7 @@
     height: 50px;
     background-color: $color-secondary-dark;
     color: $color-secondary-light;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -90,7 +91,7 @@
     color: $color-text-dark;
     width: 219px;
     height: 24px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -119,7 +120,7 @@
   &--awesome-prof {
     width: 292px;
     height: 17px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 12px;
     font-weight: 600;
     font-stretch: normal;

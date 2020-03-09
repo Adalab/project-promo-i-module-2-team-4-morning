@@ -1,8 +1,6 @@
 .design {
   padding-top: 30px;
-  @media all and(min-width:768px) {
-    padding-right: 30px;
-  }
+
   &--container__1 {
     display: flex;
     margin-bottom: 10px;
@@ -34,7 +32,7 @@
   }
   &--container__2 {
     display: flex;
-    border-bottom: 1px solid $color-text-medium;
+    // border-bottom: 1px solid $color-text-medium;
     padding-bottom: 15px;
     padding-top: 22px;
     justify-content: space-between;
