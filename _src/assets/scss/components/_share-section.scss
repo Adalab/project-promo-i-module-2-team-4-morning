@@ -5,14 +5,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 20px;
   border-top: 1px solid $color-text-medium;
+  border-bottom: 1px solid $color-text-medium;
 }
 
 .share {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 
   &--icon1 {
     color: $color-secondary-dark;
@@ -48,7 +50,6 @@
     border: 0px;
     border-radius: 12px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-    margin-right: 20px;
     outline: none;
 
     &:active {
@@ -63,6 +64,7 @@
       margin-top: 7px;
       margin-bottom: 20px;
       padding-bottom: 30px;
+      padding-top: 30px;
       border-bottom: 1px solid $color-text-medium;
     }
   }
@@ -82,9 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid $color-text-medium;
   margin-bottom: 20px;
-  padding-bottom: 37px;
 
   &--text {
     font-size: 18px;
