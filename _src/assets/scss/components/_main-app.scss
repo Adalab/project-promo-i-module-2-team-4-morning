@@ -1,8 +1,24 @@
+.section--fill,
+.design,
+.section--share {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  padding-top: 20px;
+}
+.section--share {
+  padding-bottom: 20px;
+}
+
 @media all and (min-width: 768px) {
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     .information {
       grid-column: 1/2;
       grid-row: 1/4;
@@ -11,5 +27,14 @@
       grid-column: 2/3;
       grid-row: 1/4;
     }
+  }
+  .section--fill,
+  .design,
+  .section--share {
+    padding: 10px 30px 10px 0px;
+  }
+
+  .design {
+    padding-top: 20px;
   }
 }

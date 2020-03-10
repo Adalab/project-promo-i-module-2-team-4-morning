@@ -78,3 +78,49 @@ function changePreview2(clientData) {
 //////NO SE QUE QUIERO HACER AQUI
 // const getPreviewData = document.querySelector(".card-sample--card");
 // getPreviewData.innerHTML = changePreview2();
+
+////////////////VOY A HACER LA PREVIEW
+const htmlPreviewChanges = getPreviewCard(clientData);
+const previewCard = document.querySelector(".js-section");
+previewCard.innerHTML = htmlPreviewChanges;
+
+//funcion para pintar la preview card
+function getPreviewCard() {
+  const htmlPreviewCode = `<section class="card-sample">
+  <div class="card-sample--container">
+    <button class="js-card-sample--button card-sample--button">
+      <i class="far fa-trash-alt"></i> Reset
+    </button>
+    <div class="card-sample--card">
+      <h2 class="card-sample--card__title js-card-sample--card__title ">
+      ${clientData.name}
+      </h2>
+      <h3 class="card-sample--card__subtitle js-card-sample--card__subtitle">
+      ${clientData.job}
+      </h3>
+      <img src="./assets/images/preview-photo.jpg" alt="imagen de ejemplo" />
+      <div class="card-sample--item">
+        <a class="card-sample--item__link1 js-card-sample--item__link" href="${clientData.tel}"
+          ><i class="fas fa-mobile-alt"></i
+        ></a>
+      </div>
+      <div class="card-sample--item">
+        <a class="card-sample--item__link2 js-card-sample--item__link" href="${clientData.email}"
+          ><i class="far fa-envelope"></i
+        ></a>
+      </div>
+      <div class="card-sample--item">
+        <a class="card-sample--item__link3 js-card-sample--item__link" href="${clientData.linkedin}"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <div class="card-sample--item">
+        <a class="card-sample--item__link4 js-card-sample--item__link" href="${clientData.github}"
+          ><i class="fab fa-github-alt"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</section>`;
+  return htmlPreviewCode;
+}
