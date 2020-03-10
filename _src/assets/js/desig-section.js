@@ -2,7 +2,6 @@
 
 // data
 
-
 //listen events
 const selectPalette1 = document.querySelector('.js-radio-design-palette-1');
 const selectPalette2 = document.querySelector('.js-radio-design-palette-2');
@@ -28,38 +27,38 @@ selectPalette3.addEventListener('change', handlePreviewCard);
 
 //styles preview card
 
-const titleCard = document.getElementsByClassName('js-card-sample--card__title');
+const titleCard = document.querySelector('.js-card-sample--card__title');
 console.log(titleCard);
 
-const subtitleCard = document.getElementsByClassName('js-card-sample--card__subtitle');
+const subtitleCard = document.querySelector('.js-card-sample--card__subtitle');
 console.log(subtitleCard);
 
-const linksCard = document.getElementsByClassName('js-card-sample--item__link');
+const linksCard = document.querySelectorAll('.js-card-sample--item__link');
 console.log(linksCard);
 
-function addPalette1(){
+function addPalette1() {
   titleCard.classList.add('title--palette-1');
   titleCard.classList.remove('title--palette-2', 'title--palette-3');
   subtitleCard.classList.add('subtitle--palette-1');
   subtitleCard.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
-  linksCard.add('link--palette-1');
-  linksCard.remove('link--palette-2', 'link--palette-3');
+  linksCard.classList.add('link--palette-1');
+  linksCard.classList.remove('link--palette-2', 'link--palette-3');
 }
 
-function addPalette2(){
+function addPalette2() {
   titleCard.classList.add('title--palette-2');
   titleCard.classList.remove('title--palette-1', 'title--palette-3');
   subtitleCard.classList.add('subtitle--palette-2');
   subtitleCard.classList.remove('subtitle--palette-1', 'subtitle--palette-3');
-  linksCard.add('link--palette-2');
-  linksCard.remove('link--palette-1', 'link--palette-3');
+  linksCard.classList.add('link--palette-2');
+  linksCard.classList.remove('link--palette-1', 'link--palette-3');
 }
 
-function addPalette3(){
+function addPalette3() {
   titleCard.classList.add('title--palette-3');
   titleCard.classList.remove('title--palette-1', 'title--palette-2');
   subtitleCard.classList.add('subtitle--palette-3');
   subtitleCard.classList.remove('subtitle--palette-1', 'subtitle--palette-2');
-  linksCard.add('link--palette-3');
-  linksCard.remove('link--palette-1', 'link--palette-2');
+  linksCard.classList.add('link--palette-3');
+  linksCard.classList.remove('link--palette-1', 'link--palette-2');
 }

@@ -15,9 +15,9 @@ function confirmReset() {
     background: '#fff',
     backdrop: `
 			rgba(0,0,123,0.4)
-			url("../assets/images/nyan-cat-2.gif")
+			url("./assets/images/nyan-cat-2.gif")
 			left top
-			no-repeat
+			no-repeat 
 		`
   }).then(resetForm);
 }

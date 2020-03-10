@@ -12,127 +12,27 @@
         rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
         rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/main-landing.css" />
     </head>
     
     <body>
-        <header class="header">
-            <div class="header__logo">
-                <img class="logo" src="./assets/images/logo-awesome-profile-cards.svg"
-                alt="Awesome profile cards" />
-            </div>
-        </header>
         <main>
-            <section>
-                <section class="card-sample">
-                    <div class="card-sample--container">
-                        <button class="card-sample--button"><i class="far fa-trash-alt"></i> Reset</button>
-                        <div class="card-sample--card">
-                             <h2 class="card-sample--card__title">Nombre Apellido</h2> 
-                             <h3 class="card-sample--card__subtitle">Front-end developer</h3> 
-                            <img src="./assets/images/preview-photo.jpg" alt="imagen de ejemplo" />
-                            <div class="card-sample--item"> <a class="card-sample--item__link1" href="#"><i class="fas fa-mobile-alt"></i></a> 
-                            </div>
-                            <div class="card-sample--item"> <a class="card-sample--item__link2" href="#"><i class="far fa-envelope"></i></a> 
-                            </div>
-                            <div class="card-sample--item"> <a class="card-sample--item__link3" href="#"><i class="fab fa-linkedin-in"></i></a> 
-                            </div>
-                            <div class="card-sample--item"> <a class="card-sample--item__link4" href="#"><i class="fab fa-github-alt"></i></a> 
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <section class="design">
-                <div class="design--container__1">
-                    <div class="design--logo-design"> <i class="far fa-object-ungroup"></i> 
-                    </div>
-                    <p class="design--title">Diseña</p>
-                    <div class="design--logo-angleup"> <i class="fas fa-angle-up"></i> 
-                    </div>
-                </div>
-                <div class="design--container__2">
-                    <p class="design--subtitle">Colores</p>
-                    <form class="design--form" action="" method="GET">
-                        <div class="design--form__item">
-                            <input type="radio" name="select-palette" />
-                            <div class="design--palette1">
-                                <div class="design--palette1__colorA"></div>
-                                <div class="design--palette1__colorB"></div>
-                                <div class="design--palette1__colorC"></div>
-                            </div>
-                        </div>
-                        <div class="design--form__item">
-                            <input type="radio" name="select-palette" />
-                            <div class="design--palette2">
-                                <div class="design--palette2__colorA"></div>
-                                <div class="design--palette2__colorB"></div>
-                                <div class="design--palette2__colorC"></div>
-                            </div>
-                        </div>
-                        <div class="design--form__item">
-                            <input type="radio" name="select-palette" />
-                            <div class="design--palette3">
-                                <div class="design--palette3__colorA"></div>
-                                <div class="design--palette3__colorB"></div>
-                                <div class="design--palette3__colorC"></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <section class="section--fill">
-                <!-- Titulo de seccion -->
-                <div class="title"> <span class="title--icon1"><i class="far fa-keyboard"></i></span> 
-                     <h3 class="title--text">Rellena</h3>  <a class="title--icon2 show"><i class="fas fa-angle-up closed"></i></a> 
-                </div>
-                <div class="hidden">
-                    <!-- Formulario -->
-                    <form class="form" action="/signup" method="post">
-                        <!-- Nombre -->
-                        <label for="form--name">Nombre completo</label>
-                        <input id="form--name" type="text" name="form--name"
-                        placeholder="Ej: Sally Jill" required />
-                        <!-- Puesto -->
-                        <label for="form--job">Puesto</label>
-                        <input id="form--job" type="text" name="form--job" placeholder="Ej: Front-end unicorn"
-                        required />
-                        <!-- Boton para subir imagen -->
-                        <label for="form--img">Imagen de perfil</label>
-                        <div class="form--button__container">
-                            <button class="form--button">Añadir imagen</button> <span class="form--button__box"></span> 
-                        </div>
-                        <!-- Correo electronico -->
-                        <label for="form--email">Email</label>
-                        <input type="email" id="form--email" name="form--email" placeholder="Ej: sally-hill@gmail.com"
-                        required />
-                        <!-- Telefono -->
-                        <label for="form--phone">Teléfono</label>
-                        <input type="tel" id="form--phone" name="form--phone"
-                        placeholder="555-55-55-55" />
-                        <!-- Linkedin -->
-                        <label for="form--linkedin">Linkedin</label>
-                        <input id="form--linkedin" type="text" name="form--linkedin"
-                        placeholder="Ej: linkedin.com/in/sally.hill" required />
-                        <label for="form--job">Github</label>
-                        <input id="form--github" type="text" name="form--github"
-                        placeholder="Ej: @sally-hill" required />
-                    </form>
-                </div>
-            </section>
-            <!-- <div class="card-sample--item">           <a class="card-sample--item__link3" href="#"><i class="fab fa-linkedin-in"></i></a>         </div>         <div class="card-sample--item">           <a class="card-sample--item__link4" href="#"><i class="fab fa-github-alt"></i></a>         </div> -->
-            <section class="section--share">
-                <!-- Titulo de seccion -->
-                <div class="share"> <span class="share--icon1"><i class="fas fa-share-alt"></i></span> 
-                    <h3
-                    class="share--text">
-                        </i>Comparte</h3> <a class="share--icon2"><i class="fas fa-angle-up"></i></a> 
-                </div>
-                <!-- Boton -->
-                <div class="share--button__container">
-                    <button class="share--button"> <i class="far fa-address-card"></i> Crear tarjeta</button> <span class="share--button__box"></span> 
-                </div>
-            </section>
+            <div class="landing">
+                <img class="landing--logo" src="./assets/images/logo-awesome-profile-cards.svg"
+                alt="" />
+                 <h1 class="landing--title">Crea tu tarjeta de visita</h1> 
+                <p class="landing--text">Crea mejores contactos profesionales de forma fácil y cómoda</p>
+                <div class="landing--rectangle">
+                    <ul class="landing--list">
+                        <li class="landing--list__item"> <a class="landing--list__link" href="">             <i class="far fa-object-ungroup landing--list__icon"></i>             <p>Diseña</p>           </a> 
+                        </li>
+                        <li class="landing--list__item"> <a class="landing--list__link" href="">             <i class="far fa-keyboard landing--list__icon"></i>             <p>Rellena</p>           </a> 
+                        </li>
+                        <li class="landing--list__item"> <a class="landing--list__link" href="">             <i style="text-decoration: none;" class="fas fa-share-alt landing--list__icon"></i>             <p>Comparte</p>           </a> 
+                        </li>
+                    </ul>
+                </div> <a class="landing--button" href="./app.html">       comenzar     </a> 
+            </div>
         </main>
         <footer>
             <div class="footer">

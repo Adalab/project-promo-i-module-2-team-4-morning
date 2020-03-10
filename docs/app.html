@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Profile Awesome Cards</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,900&display=swap");
+        </style>
+        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+        rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <img class="logo" src="./assets/images/logo-awesome-profile-cards.svg"
+                alt="Awesome profile cards" />
+            </div>
+        </header>
+        <main class="main">
+            <section class="card-sample">
+                <div class="card-sample--container">
+                    <button class="js-card-sample--button card-sample--button"> <i class="far fa-trash-alt"></i> Reset</button>
+                    <div class="card-sample--card">
+                         <h2 class="card-sample--card__title js-card-sample--card__title ">         Nombre Apellido       </h2> 
+                         <h3 class="card-sample--card__subtitle js-card-sample--card__subtitle">         Front-end developer       </h3> 
+                        <img src="./assets/images/preview-photo.jpg" alt="imagen de ejemplo" />
+                        <div class="card-sample--item"> <a class="card-sample--item__link1 js-card-sample--item__link" href="#"><i class="fas fa-mobile-alt"></i         ></a> 
+                        </div>
+                        <div class="card-sample--item"> <a class="card-sample--item__link2 js-card-sample--item__link" href="#"><i class="far fa-envelope"></i         ></a> 
+                        </div>
+                        <div class="card-sample--item"> <a class="card-sample--item__link3 js-card-sample--item__link" href="#"><i class="fab fa-linkedin-in"></i         ></a> 
+                        </div>
+                        <div class="card-sample--item"> <a class="card-sample--item__link4 js-card-sample--item__link" href="#"><i class="fab fa-github-alt"></i         ></a> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="information">
+                <section class="design">
+                    <div class="design--container__1">
+                        <div class="design--logo-design"> <i class="far fa-object-ungroup"></i> 
+                        </div>
+                        <p class="design--title">Diseña</p>
+                        <div class="design--logo-angleup"> <i class="js-arrow fas fa-angle-up"></i> 
+                        </div>
+                    </div>
+                    <div class="design--container__2">
+                        <p class="design--subtitle">Colores</p>
+                        <form class="design--form" action="" method="GET">
+                            <div class="design--form__item">
+                                <input type="radio" name="select-palette" class="js-radio-design-palette-1"
+                                />
+                                <div class="design--palette1">
+                                    <div class="design--palette1__colorA"></div>
+                                    <div class="design--palette1__colorB"></div>
+                                    <div class="design--palette1__colorC"></div>
+                                </div>
+                            </div>
+                            <div class="design--form__item">
+                                <input type="radio" name="select-palette" class="js-radio-design-palette-2"
+                                />
+                                <div class="design--palette2">
+                                    <div class="design--palette2__colorA"></div>
+                                    <div class="design--palette2__colorB"></div>
+                                    <div class="design--palette2__colorC"></div>
+                                </div>
+                            </div>
+                            <div class="design--form__item">
+                                <input type="radio" name="select-palette" class="js-radio-design-palette-3"
+                                />
+                                <div class="design--palette3">
+                                    <div class="design--palette3__colorA"></div>
+                                    <div class="design--palette3__colorB"></div>
+                                    <div class="design--palette3__colorC"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="section--fill">
+                    <!-- Titulo de seccion -->
+                    <div class="title"> <span class="title--icon1"><i class="far fa-keyboard"></i></span> 
+                         <h3 class="title--text">Rellena</h3>  <a class="title--icon2 show"><i class="js-arrow-fill fas fa-angle-up"></i></a> 
+                    </div>
+                    <div class="js-fill--div">
+                        <!-- Formulario -->
+                        <form class="form" action="/signup" method="post">
+                            <!-- Nombre -->
+                            <label for="form--name">Nombre completo <span class="form-object"> *</span>
+
+                            </label>
+                            <input id="form--name" type="text" name="form--name" placeholder="Ej: Sally Jill"
+                            required />
+                            <!-- Puesto -->
+                            <label for="form--job">Puesto <span class="form-object"> *</span>
+
+                            </label>
+                            <input id="form--job" type="text" name="form--job" placeholder="Ej: Front-end unicorn"
+                            required />
+                            <!-- Boton para subir imagen -->
+                            <label for="form--img">Imagen de perfil<span class="form-object"> *</span>
+
+                            </label>
+                            <div class="form--button__container">
+                                <button class="form--button">Añadir imagen</button> <span class="form--button__box"></span> 
+                            </div>
+                            <!-- Correo electronico -->
+                            <label for="form--email">Email <span class="form-object"> *</span>
+
+                            </label>
+                            <input type="email" id="form--email" name="form--email" placeholder="Ej: sally-hill@gmail.com"
+                            required />
+                            <!-- Telefono -->
+                            <label for="form--phone">Teléfono <span class="form-object"> *</span>
+
+                            </label>
+                            <input type="tel" id="form--phone" name="form--phone" placeholder="555-55-55-55"
+                            required />
+                            <!-- Linkedin -->
+                            <label for="form--linkedin">Linkedin <span class="form-object"> *</span>
+
+                            </label>
+                            <input id="form--linkedin" type="text" name="form--linkedin" placeholder="Ej: linkedin.com/in/sally.hill"
+                            required />
+                            <label for="form--job">Github<span class="form-object"> *</span>
+
+                            </label>
+                            <input id="form--github" type="text" name="form--github" placeholder="Ej: @sally-hill"
+                            required />
+                        </form>
+                    </div>
+                </section>
+                <!-- <div class="card-sample--item">           <a class="card-sample--item__link3" href="#"><i class="fab fa-linkedin-in"></i></a>         </div>         <div class="card-sample--item">           <a class="card-sample--item__link4" href="#"><i class="fab fa-github-alt"></i></a>         </div> -->
+                <section class="section--share">
+                    <!-- Titulo de seccion -->
+                    <div class="share"> <span class="share--icon1"><i class="fas fa-share-alt"></i></span> 
+                        <h3
+                        class="share--text">
+                            </i>Comparte</h3> <a class="share--icon2"><i class="js-arrow-share fas fa-angle-up"></i></a> 
+                    </div>
+                    <!-- Boton -->
+                    <div class="js-share--div">
+                        <div class="share--button__container">
+                            <button class="share--button"> <i class="far fa-address-card"></i> Crear tarjeta</button>
+                        </div>
+                        <!-- Tarjeta Creada -->
+                        <div class="share--card--created">
+                            <div class="share--card--created--text">La tarjeta ha sido creada</div>
+                            <div class="share--card--created--awesome-prof">url creada</div>
+                            <div class="share--card--created--button__container"></div>
+                            <button class="share--card--created--button"><i class="fab fa-twitter"></i> Compartir en twitter</button>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="footer--title"> <small>         Awesome profile-cards @2018       </small> 
+                </div>
+                <div>
+                    <img class="footer--logo" src="./assets/images/logo-adalab.png" alt=""
+                    />
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    </body>
+
+</html>

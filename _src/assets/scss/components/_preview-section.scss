@@ -30,20 +30,20 @@
       font-weight: bold;
       font-size: 18px;
       line-height: 20px;
-      color: $color-primary-dark;
+      // color: $color-primary-dark;
       margin: 0;
       padding: 0 0 4px 20px;
-      border-left: solid 5px $color-primary-medium;
+      // border-left: solid 5px $color-primary-medium;
     }
     &__subtitle {
       font-family: 'Montserrat';
       font-weight: normal;
       font-size: 16px;
       line-height: 20px;
-      color: $color-text-dark;
+      // color: $color-text-dark;
       margin: 0 0 10px 0;
       padding: 0 0 0 20px;
-      border-left: solid 5px $color-primary-medium;
+      // border-left: solid 5px $color-primary-medium;
     }
   }
 
@@ -55,8 +55,8 @@
     &__link4 {
       display: block;
       margin: 10px 5px 12px 5px;
-      color: $color-primary-dark;
-      border: solid 2px $color-primary-light;
+      // color: $color-primary-dark;
+      // border: solid 2px $color-primary-light;
       border-radius: 50%;
     }
     &__link1 {
@@ -79,6 +79,7 @@
   .card-sample {
     padding: 233px 44px 260px 44px;
     border-radius: 6px;
+    margin-left: 30px;
   }
 }
 
