@@ -23,11 +23,14 @@ function confirmReset() {
 }
 function resetForm(result) {
   if (result.value) {
-    document.querySelector('.form').reset();
+    for (const form of document.querySelectorAll('.js-form')) {
+      form.reset();
+    }
   }
 }
 
 buttonReset.addEventListener('click', confirmReset);
+
 //OCULTA SECCIÓN DESIGN
 const getDesignArrow = document.querySelector('.js-arrow');
 const getDesignSection = document.querySelector('.design--container__2');
