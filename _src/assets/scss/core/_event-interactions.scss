@@ -41,6 +41,18 @@
 }
 
 .link--palette-3 {
-  color:  #3e5b65;
+  color: #3e5b65;
   border: solid 2px #a0c0cf;
+}
+
+.link--palette-1:hover {
+  background-color:#a2deaf;
+}
+
+.link--palette-2:hover {
+  background-color:#e95626;
+}
+
+.link--palette-3:hover {
+  background-color:#a0c0cf;
 }
