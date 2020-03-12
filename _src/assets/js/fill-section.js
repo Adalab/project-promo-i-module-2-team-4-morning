@@ -1,12 +1,9 @@
 //FILL SECTION
 
-//leo mi boton desencadenante
-// const btnInput = document.querySelector(".form");
-
 let clientData = {
   name: document.querySelector(".js-fill-name"),
   job: document.querySelector(".js-fill-job"),
-  imgURL: "./assets/images/preview-photo.jpg",
+  // imgURL: "./assets/images/preview-photo.jpg",
   email: document.querySelector(".js-fill-email"),
   tel: document.querySelector(".js-fill-tel"),
   linkedin: document.querySelector(".js-fill-linkedin"),
@@ -14,6 +11,7 @@ let clientData = {
 };
 
 let previewData = {
+  //llamar namePrev --- name
   namePrev: document.querySelector(".js-card-sample--card__title"),
   jobPrev: document.querySelector(".js-card-sample--card__subtitle"),
   // imgPrev = document.querySelector ('.js-card-sample--card__'),
@@ -24,9 +22,14 @@ let previewData = {
 };
 
 function paintForm(ev) {
-  if (ev.currentTarget.classList.contains("js-fill-name")) {
+  if (clientData.name.value === "") {
+    previewData.namePrev.innerHTML = "Nombre Apellido";
+  } else {
     previewData.namePrev.innerHTML = clientData.name.value;
-  } else if (ev.currentTarget.classList.contains("js-fill-job")) {
+  }
+  // if (ev.currentTarget.classList.contains("js-fill-name")) {
+  // }
+  if (ev.currentTarget.classList.contains("js-fill-job")) {
     previewData.jobPrev.innerHTML = clientData.job.value;
   } else if (ev.currentTarget.classList.contains("js-fill-email")) {
     previewData.emailPrev.setAttribute(
