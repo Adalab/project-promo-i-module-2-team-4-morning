@@ -34,7 +34,10 @@ function paintForm(ev) {
       `mailto: ${clientData.email.value}`
     );
   } else if (ev.currentTarget.classList.contains("js-fill-tel")) {
-    previewData.telPrev.setAttribute("href", clientData.tel.value);
+    previewData.telPrev.setAttribute(
+      "href",
+      `tel: +34 ${clientData.tel.value}`
+    );
   } else if (ev.currentTarget.classList.contains("js-fill-linkedin")) {
     previewData.linkedinPrev.setAttribute("href", clientData.linkedin.value);
   } else if (ev.currentTarget.classList.contains("js-fill-github")) {
