@@ -21,12 +21,66 @@ function confirmReset() {
 		`
   }).then(resetForm);
 }
-function resetForm(result) {
-  if (result.value) {
-    for (const form of document.querySelectorAll('.js-form')) {
-      form.reset();
-    }
+debugger;
+function resetForm() {
+  if ((previewData.namePrev.innerHTML = '')) {
+    clientData.name.value != '';
+  } else {
+    previewData.namePrev.innerHTML = 'Nombre Apellido';
+    clientData.name.value = '';
   }
+  if ((previewData.jobPrev.innerHTML = '')) {
+    clientData.job.value != '';
+  } else {
+    previewData.jobPrev.innerHTML = 'Front-end developer';
+    clientData.job.value = '';
+  }
+  if ((previewData.emailPrev.setAttribute = '')) {
+    clientData.email.value != '';
+  } else {
+    previewData.emailPrev.value = '';
+    clientData.email.value = '';
+  }
+  if ((previewData.telPrev.setAttribute = '')) {
+    clientData.tel.value != '';
+  } else {
+    previewData.telPrev.value = '';
+    clientData.tel.value = '';
+  }
+  if ((previewData.linkedinPrev.setAttribute = '')) {
+    clientData.linkedin.value != '';
+  } else {
+    previewData.linkedinPrev.value = '';
+    clientData.linkedin.value = '';
+  }
+  if ((previewData.githubPrev.setAttribute = '')) {
+    clientData.github.value != '';
+  } else {
+    previewData.githubPrev.value = '';
+    clientData.github.value = '';
+  }
+  if (titleCard.classList != 'title--palette-1') {
+    titleCard.classList.add('title--palette-1');
+    titleCard.classList.remove('title--palette-2', 'title--palette-3');
+  }
+  if (subtitleCard.classList != 'subtitle--palette-1') {
+    subtitleCard.classList.add('subtitle--palette-1');
+    subtitleCard.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
+  }
+  for (let i = 0; i < linksCard.length; i++) {
+    linksCard[i].classList.add('link--palette-1');
+    linksCard[i].classList.remove('link--palette-2', 'link--palette-3');
+  }
+  if (selectPalette3 === 'checked') {
+    currentTarget.classList.checkboxradio('refresh');
+  }
+  // if (
+  //   currentTarget.classList.contains(
+  //     'js-radio-design-palette-2' || 'js-radio-design-palette-3'
+  //   )
+  // ) {
+  //   currentTarget.classList.add('js-radio-design-palette-1');
+  // }
 }
 
 buttonReset.addEventListener('click', confirmReset);
