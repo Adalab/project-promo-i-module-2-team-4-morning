@@ -1,6 +1,7 @@
 'use strict';
 
 const buttonReset = document.querySelector('.js-card-sample--button');
+document.getElementById('js-radio-design-palette-1').checked = true;
 
 function confirmReset() {
   Swal.fire({
@@ -60,6 +61,7 @@ function resetForm() {
     clientData.github.value = '';
   }
   if (titleCard.classList != 'title--palette-1') {
+    document.getElementById('js-radio-design-palette-1').checked = true;
     titleCard.classList.add('title--palette-1');
     titleCard.classList.remove('title--palette-2', 'title--palette-3');
   }
@@ -71,16 +73,6 @@ function resetForm() {
     linksCard[i].classList.add('link--palette-1');
     linksCard[i].classList.remove('link--palette-2', 'link--palette-3');
   }
-  if (selectPalette3 === 'checked') {
-    currentTarget.classList.checkboxradio('refresh');
-  }
-  // if (
-  //   currentTarget.classList.contains(
-  //     'js-radio-design-palette-2' || 'js-radio-design-palette-3'
-  //   )
-  // ) {
-  //   currentTarget.classList.add('js-radio-design-palette-1');
-  // }
 }
 
 buttonReset.addEventListener('click', confirmReset);
