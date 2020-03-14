@@ -23,13 +23,13 @@ let previewData = {
   //llamar namePrev --- name
   namePrev: document.querySelector('.js-card-sample--card__title'),
   jobPrev: document.querySelector('.js-card-sample--card__subtitle'),
-  imgPrev : document.querySelector ('.js-card-sample--card__img'),
+  imgPrev: document.querySelector('.js-card-sample--card__img'),
   emailPrev: document.querySelector('.js-email-preview'),
   telPrev: document.querySelector('.js-tel-preview'),
   linkedinPrev: document.querySelector('.js-linkedin-preview'),
   githubPrev: document.querySelector('.js-github-preview')
 };
-debugger;
+
 function paintForm(ev) {
   if (clientData.name.value === '') {
     previewData.namePrev.innerHTML = 'Nombre Apellido';
@@ -40,20 +40,12 @@ function paintForm(ev) {
   // }
   if (ev.currentTarget.classList.contains('js-fill-job')) {
     previewData.jobPrev.innerHTML = clientData.job.value;
-    debugger;
   } else if (ev.currentTarget.classList.contains('js-fill-file')) {
-    previewData.imgPrev.src = clientData.imgURL;
-  }
-  else if (ev.currentTarget.classList.contains('js-fill-email')) {
-    previewData.emailPrev.setAttribute(
-      'href',
-      `mailto: ${clientData.email.value}`
-    );
+    previewData.imgPrev.setAttribute('src', clientData.imgURL);
+  } else if (ev.currentTarget.classList.contains('js-fill-email')) {
+    previewData.emailPrev.setAttribute('href', `mailto: ${clientData.email.value}`);
   } else if (ev.currentTarget.classList.contains('js-fill-tel')) {
-    previewData.telPrev.setAttribute(
-      'href',
-      `tel: +34 ${clientData.tel.value}`
-    );
+    previewData.telPrev.setAttribute('href', `tel: +34 ${clientData.tel.value}`);
   } else if (ev.currentTarget.classList.contains('js-fill-linkedin')) {
     previewData.linkedinPrev.setAttribute('href', clientData.linkedin.value);
   } else if (ev.currentTarget.classList.contains('js-fill-github')) {
@@ -62,6 +54,7 @@ function paintForm(ev) {
 }
 clientData.name.addEventListener('keyup', paintForm);
 clientData.job.addEventListener('keyup', paintForm);
+
 clientData.imgURL.addEventListener('change', paintForm);
 clientData.email.addEventListener('keyup', paintForm);
 clientData.tel.addEventListener('keyup', paintForm);
