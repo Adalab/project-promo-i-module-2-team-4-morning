@@ -60,16 +60,20 @@ function resetForm() {
     previewData.github.value = '';
     clientData.github.value = '';
   }
-  if (titleCard.classList != 'title--palette-1') {
+  if (previewData.name.classList != 'title--palette-1') {
     document.getElementById('js-radio-design-palette-1').checked = true;
-    titleCard.classList.add('title--palette-1');
-    titleCard.classList.remove('title--palette-2', 'title--palette-3');
+    previewData.name.classList.add('title--palette-1');
+    previewData.name.classList.remove('title--palette-2', 'title--palette-3');
   }
-  if (subtitleCard.classList != 'subtitle--palette-1') {
-    subtitleCard.classList.add('subtitle--palette-1');
-    subtitleCard.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
+  if (previewData.job.classList != 'subtitle--palette-1') {
+    previewData.job.classList.add('subtitle--palette-1');
+    previewData.job.classList.remove(
+      'subtitle--palette-2',
+      'subtitle--palette-3'
+    );
   }
   for (let i = 0; i < linksCard.length; i++) {
+    document.getElementById('js-radio-design-palette-1').checked = true;
     linksCard[i].classList.add('link--palette-1');
     linksCard[i].classList.remove('link--palette-2', 'link--palette-3');
   }
