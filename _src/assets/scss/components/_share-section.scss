@@ -62,11 +62,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 7px;
-      margin-bottom: 20px;
+      margin-top: 20px;
       padding-bottom: 30px;
-      padding-top: 30px;
-      border-bottom: 1px solid $color-text-medium;
+
+      // border-bottom: 1px solid $color-text-medium;
     }
   }
 }
@@ -86,7 +85,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-
+  padding-top: 20px;
+  border-top: 1px solid $color-text-medium;
   &--text {
     font-size: 18px;
     color: $color-text-dark;
@@ -102,14 +102,17 @@
   }
   &--button {
     color: $color-secondary-light;
+    text-align: center;
+    text-decoration: none;
     background-color: #00a0f5;
+    font-family: $font-primary;
     font-size: 14px;
     line-height: 20px;
     width: 181px;
     height: 30px;
     border-radius: 3px;
+    padding-top: 5px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-    outline: none;
 
     &__container {
       display: flex;

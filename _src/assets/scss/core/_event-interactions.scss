@@ -59,8 +59,9 @@
 // COSAS DE LA SECCIÍON SHARE
 
 .js-share--button {
+  background-color: $color-secondary-dark;
+
   &:active {
-    background-color: $color-secondary-dark;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    background-color: $color-text-light;
   }
 }
