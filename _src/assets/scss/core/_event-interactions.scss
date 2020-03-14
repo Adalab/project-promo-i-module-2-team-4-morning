@@ -56,3 +56,11 @@
 .link--palette-3:hover {
   background-color: #a0c0cf;
 }
+// COSAS DE LA SECCIÍON SHARE
+
+.js-share--button {
+  &:active {
+    background-color: $color-secondary-dark;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  }
+}

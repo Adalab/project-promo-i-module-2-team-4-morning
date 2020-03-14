@@ -22,7 +22,7 @@
     height: 18px;
   }
   &--text {
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
@@ -44,7 +44,7 @@
     background-color: #d5d5d5;
 
     color: $color-secondary-light;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -53,10 +53,10 @@
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     outline: none;
 
-    &:active {
-      background-color: $color-secondary-dark;
-      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-    }
+    // &:active {
+    //   background-color: $color-secondary-dark;
+    //   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    // }
 
     &__container {
       display: flex;
@@ -92,7 +92,7 @@
     color: $color-text-dark;
     width: 219px;
     height: 24px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -121,7 +121,7 @@
   &--awesome-prof {
     width: 292px;
     height: 17px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 12px;
     font-weight: 600;
     font-stretch: normal;
