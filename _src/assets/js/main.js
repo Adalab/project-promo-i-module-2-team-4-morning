@@ -24,40 +24,40 @@ function confirmReset() {
 }
 debugger;
 function resetForm() {
-  if ((previewData.namePrev.innerHTML = '')) {
+  if ((previewData.name.innerHTML = '')) {
     clientData.name.value != '';
   } else {
-    previewData.namePrev.innerHTML = 'Nombre Apellido';
+    previewData.name.innerHTML = 'Nombre Apellido';
     clientData.name.value = '';
   }
-  if ((previewData.jobPrev.innerHTML = '')) {
+  if ((previewData.job.innerHTML = '')) {
     clientData.job.value != '';
   } else {
-    previewData.jobPrev.innerHTML = 'Front-end developer';
+    previewData.job.innerHTML = 'Front-end developer';
     clientData.job.value = '';
   }
-  if ((previewData.emailPrev.setAttribute = '')) {
+  if ((previewData.email.setAttribute = '')) {
     clientData.email.value != '';
   } else {
-    previewData.emailPrev.value = '';
+    previewData.email.value = '';
     clientData.email.value = '';
   }
-  if ((previewData.telPrev.setAttribute = '')) {
+  if ((previewData.tel.setAttribute = '')) {
     clientData.tel.value != '';
   } else {
-    previewData.telPrev.value = '';
+    previewData.tel.value = '';
     clientData.tel.value = '';
   }
-  if ((previewData.linkedinPrev.setAttribute = '')) {
+  if ((previewData.linkedin.setAttribute = '')) {
     clientData.linkedin.value != '';
   } else {
-    previewData.linkedinPrev.value = '';
+    previewData.linkedin.value = '';
     clientData.linkedin.value = '';
   }
-  if ((previewData.githubPrev.setAttribute = '')) {
+  if ((previewData.github.setAttribute = '')) {
     clientData.github.value != '';
   } else {
-    previewData.githubPrev.value = '';
+    previewData.github.value = '';
     clientData.github.value = '';
   }
   if (titleCard.classList != 'title--palette-1') {
