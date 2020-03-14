@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 //coge los inputs de texto (falta la imagen)
 const getInputName = document.querySelector('.js-fill-name');
 const getInputJob = document.querySelector('.js-fill-job');
