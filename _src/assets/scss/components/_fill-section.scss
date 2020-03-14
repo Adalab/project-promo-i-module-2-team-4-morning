@@ -1,9 +1,10 @@
 .section--fill {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding-top: 10px;
   width: 100%;
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
+  border-top: 1px solid $color-text-medium;
 }
 
 .form-object {
@@ -14,7 +15,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 25px;
-  padding-bottom: 30px;
+  // padding-bottom: 10px;
 
   label {
     color: $color-primary-dark;
@@ -30,6 +31,14 @@
     font-family: $font-primary;
     padding-left: 8px;
     background-color: transparent;
+  }
+  &--file{
+    position: relative;
+  }
+  &--file__input{
+    position: absolute;
+    opacity: 0.0;
+    color: transparent;
   }
   &--button {
     width: 140px;
@@ -62,6 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
   &--icon1 {
     color: $color-secondary-dark;
     width: 21px;
@@ -86,4 +96,13 @@
 }
 .fas.fa-angle-up.closed {
   transform: rotate(180deg);
+}
+@media all and(min-width:768px) {
+  .section--fill {
+    margin-right: 30px;
+  }
+  .title--text {
+    position: absolute;
+    left: 71px;
+  }
 }

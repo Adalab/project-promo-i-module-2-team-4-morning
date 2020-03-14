@@ -15,19 +15,30 @@ function confirmReset() {
     background: "#fff",
     backdrop: `
 			rgba(0,0,123,0.4)
-			url("../assets/images/nyan-cat-2.gif")
+			url("./assets/images/nyan-cat-2.gif")
 			left top
-			no-repeat
+			no-repeat 
 		`
   }).then(resetForm);
 }
 function resetForm(result) {
   if (result.value) {
+<<<<<<< HEAD
     document.querySelector(".form").reset();
   }
 }
 
 buttonReset.addEventListener("click", confirmReset);
+=======
+    for (const form of document.querySelectorAll('.js-form')) {
+      form.reset();
+    }
+  }
+}
+
+buttonReset.addEventListener('click', confirmReset);
+
+>>>>>>> dev
 //OCULTA SECCIÓN DESIGN
 const getDesignArrow = document.querySelector(".js-arrow");
 const getDesignSection = document.querySelector(".design--container__2");
