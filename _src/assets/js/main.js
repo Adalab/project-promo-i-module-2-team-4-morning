@@ -75,6 +75,8 @@ function resetForm() {
   }
 }
 
+//comentario
+
 buttonReset.addEventListener('click', confirmReset);
 
 //OCULTA SECCIÓN DESIGN
