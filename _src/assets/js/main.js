@@ -1,3 +1,8 @@
+/* eslint-disable no-debugger */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-constant-condition */
+/* eslint-disable no-undef */
+/* eslint-disable eqeqeq */
 'use strict';
 
 const buttonReset = document.querySelector('.js-card-sample--button');
