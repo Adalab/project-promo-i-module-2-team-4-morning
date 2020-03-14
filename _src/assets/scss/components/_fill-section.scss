@@ -32,6 +32,14 @@
     padding-left: 8px;
     background-color: transparent;
   }
+  &--file{
+    position: relative;
+  }
+  &--file__input{
+    position: absolute;
+    opacity: 0.0;
+    color: transparent;
+  }
   &--button {
     width: 140px;
     height: 30px;
