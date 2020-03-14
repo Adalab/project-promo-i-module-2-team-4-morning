@@ -19,7 +19,7 @@ let clientData = {
 };
 
 let previewData = {
-  palette: [],
+  // palette: [],
   //llamar namePrev --- name
   name: document.querySelector('.js-card-sample--card__title'),
   job: document.querySelector('.js-card-sample--card__subtitle'),
@@ -64,13 +64,10 @@ clientData.github.addEventListener('keyup', paintForm);
 function paintColorsPalette(event) {
   const currentTarget = event.currentTarget;
   if (currentTarget.classList.contains('js-radio-design-palette-1')) {
-    console.log(event);
     addPalette1();
   } else if (currentTarget.classList.contains('js-radio-design-palette-2')) {
-    console.log(event);
     addPalette2();
   } else if (currentTarget.classList.contains('js-radio-design-palette-3')) {
-    console.log(event);
     addPalette3();
   }
 }
