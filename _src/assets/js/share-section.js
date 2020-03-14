@@ -11,14 +11,25 @@ const btn = document.querySelector('.js-btn');
 
 // handle el botón de comparte
 function handleButton() {
-  if (getInputGithub.value === '' || getInputJob.value === '' || getInputName.value === '' || getInputPhone.value === '' || getInputMail.value === '' || getInputLinkedin.value === '') {
+  if (
+    getInputGithub.value === '' ||
+    getInputJob.value === '' ||
+    getInputName.value === '' ||
+    getInputPhone.value === '' ||
+    getInputMail.value === '' ||
+    getInputLinkedin.value === ''
+  ) {
     btn.classList.remove('js-share--button');
   } else {
     btn.classList.add('js-share--button');
-    const getCardCreated = document.querySelector('.js-card-created');
-    getCardCreated.classList.remove('hidden');
   }
 }
 
+function hide() {
+  const getCardCreated = document.querySelector('.js-card-created');
+  getCardCreated.classList.remove('hidden');
+}
+
+handleButton();
 //observa el botón de comparte
-btn.addEventListener('click', handleButton);
+btn.addEventListener('click', hide);
