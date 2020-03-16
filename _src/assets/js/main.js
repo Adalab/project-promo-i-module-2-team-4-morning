@@ -10,8 +10,7 @@ document.getElementById('js-radio-design-palette-1').checked = true;
 
 function confirmReset() {
   Swal.fire({
-    html:
-      ' <h2 class="swal2-title" id="swal2-title" style="display: flex; font-size:1.25em; font-family: merriweather;">Se van a borrar los cambios, ¿está seguro?</h2>',
+    html: ' <h2 class="swal2-title" id="swal2-title" style="display: flex; font-size:1.25em; font-family: merriweather;">Se van a borrar los cambios, ¿está seguro?</h2>',
     width: 400,
     showCancelButton: true,
     cancelButtonColor: '#CB4335',
@@ -72,10 +71,7 @@ function resetForm() {
   }
   if (previewData.job.classList != 'subtitle--palette-1') {
     previewData.job.classList.add('subtitle--palette-1');
-    previewData.job.classList.remove(
-      'subtitle--palette-2',
-      'subtitle--palette-3'
-    );
+    previewData.job.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
   }
   for (let i = 0; i < linksCard.length; i++) {
     document.getElementById('js-radio-design-palette-1').checked = true;
@@ -89,35 +85,52 @@ function resetForm() {
 
 buttonReset.addEventListener('click', confirmReset);
 
-//OCULTA SECCIÓN DESIGN
-const getDesignArrow = document.querySelector('.js-arrow');
-const getDesignSection = document.querySelector('.design--container__2');
+// //OCULTA SECCIÓN DESIGN
+// const getDesignTitle = document.querySelector('.design--container__1');
+// const getDesignArrow = document.querySelector('.js-arrow');
+// const getDesignSection = document.querySelector('.design--container__2');
 
-function hidDesignSection(ev) {
-  getDesignSection.classList.toggle('hidden');
-  getDesignArrow.classList.toggle('closed');
+// function hidDesignSection(ev) {
+//   getDesignSection.classList.toggle('hidden');
+//   getDesignArrow.classList.toggle('closed');
+// }
+
+// getDesignTitle.addEventListener('click', hidDesignSection);
+
+// //OCULTA SECCIÓN FILL
+// const getFillArrow = document.querySelector('.js-arrow-fill');
+// const getFillSection = document.querySelector('.js-fill--div');
+
+// function hidFillSection(ev) {
+//   getFillSection.classList.toggle('hidden');
+//   getFillArrow.classList.toggle('closed');
+// }
+
+// getFillArrow.addEventListener('click', hidFillSection);
+
+// //OCULTA SECCIÓN SHARE
+// const getShareArrow = document.querySelector('.js-arrow-share');
+// const getShareSection = document.querySelector('.js-share--div');
+
+// function hidShareSection(ev) {
+//   getShareSection.classList.toggle('hidden');
+//   getShareArrow.classList.toggle('closed');
+// }
+
+// getShareArrow.addEventListener('click', hidShareSection);
+
+const arrows = document.querySelectorAll('.js-arrow');
+console.log(arrows);
+
+function handleArrows() {
+  for (let arrow of arrows) {
+    arrow.classList.toggle('closed');
+  }
 }
+// for (let arrow of arrows) {
+//   arrow.addEventListener('click', handleArrows);
+// }
 
-getDesignArrow.addEventListener('click', hidDesignSection);
-
-//OCULTA SECCIÓN FILL
-const getFillArrow = document.querySelector('.js-arrow-fill');
-const getFillSection = document.querySelector('.js-fill--div');
-
-function hidFillSection(ev) {
-  getFillSection.classList.toggle('hidden');
-  getFillArrow.classList.toggle('closed');
-}
-
-getFillArrow.addEventListener('click', hidFillSection);
-
-//OCULTA SECCIÓN SHARE
-const getShareArrow = document.querySelector('.js-arrow-share');
-const getShareSection = document.querySelector('.js-share--div');
-
-function hidShareSection(ev) {
-  getShareSection.classList.toggle('hidden');
-  getShareArrow.classList.toggle('closed');
-}
-
-getShareArrow.addEventListener('click', hidShareSection);
+const getDesignTitle = document.querySelector('.design--container__1');
+const getFillTitle = document.querySelector('.js-fill-title');
+const getShareTitle = document.querySelector('.js-share-title');
