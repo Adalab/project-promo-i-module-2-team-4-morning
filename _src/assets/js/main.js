@@ -81,56 +81,66 @@ function resetForm() {
   hidShareSection();
 }
 
-//comentario
-
 buttonReset.addEventListener('click', confirmReset);
 
-// //OCULTA SECCIÓN DESIGN
-// const getDesignTitle = document.querySelector('.design--container__1');
-// const getDesignArrow = document.querySelector('.js-arrow');
-// const getDesignSection = document.querySelector('.design--container__2');
-
-// function hidDesignSection(ev) {
-//   getDesignSection.classList.toggle('hidden');
-//   getDesignArrow.classList.toggle('closed');
-// }
-
-// getDesignTitle.addEventListener('click', hidDesignSection);
-
-// //OCULTA SECCIÓN FILL
-// const getFillArrow = document.querySelector('.js-arrow-fill');
-// const getFillSection = document.querySelector('.js-fill--div');
-
-// function hidFillSection(ev) {
-//   getFillSection.classList.toggle('hidden');
-//   getFillArrow.classList.toggle('closed');
-// }
-
-// getFillArrow.addEventListener('click', hidFillSection);
-
-// //OCULTA SECCIÓN SHARE
-// const getShareArrow = document.querySelector('.js-arrow-share');
-// const getShareSection = document.querySelector('.js-share--div');
-
-// function hidShareSection(ev) {
-//   getShareSection.classList.toggle('hidden');
-//   getShareArrow.classList.toggle('closed');
-// }
-
-// getShareArrow.addEventListener('click', hidShareSection);
+//COLAPSABLES
 
 const arrows = document.querySelectorAll('.js-arrow');
-console.log(arrows);
 
-function handleArrows() {
-  for (let arrow of arrows) {
-    arrow.classList.toggle('closed');
-  }
+//OCULTA SECCIÓN DESIGN
+const getDesignTitle = document.querySelector('.design--container__1');
+const getDesignSection = document.querySelector('.design--container__2');
+
+function hidDesignSection(ev) {
+  getDesignSection.classList.toggle('hidden');
+  arrows[0].classList.toggle('closed');
 }
-// for (let arrow of arrows) {
-//   arrow.addEventListener('click', handleArrows);
+
+getDesignTitle.addEventListener('click', hidDesignSection);
+
+//OCULTA SECCIÓN FILL
+getFillTitle = document.querySelector('.js-fill-title');
+const getFillSection = document.querySelector('.js-fill--div');
+
+function hidFillSection(ev) {
+  getFillSection.classList.toggle('hidden');
+  arrows[1].classList.toggle('closed');
+}
+
+getFillTitle.addEventListener('click', hidFillSection);
+
+//OCULTA SECCIÓN SHARE
+const getShareTitle = document.querySelector('.js-share-title');
+const getShareSection = document.querySelector('.js-share--div');
+
+function hidShareSection(ev) {
+  getShareSection.classList.toggle('hidden');
+  arrows[2].classList.toggle('closed');
+}
+
+getShareTitle.addEventListener('click', hidShareSection);
+
+// const arrows = document.querySelectorAll('.js-arrow');
+// console.log(arrows);
+
+// function handleArrows(ev) {
+//   for (let arrow of arrows) {
+//     arrow.classList.toggle('closed');
+//     return ev.currentTarget.arrowClose;
+//   }
 // }
 
-const getDesignTitle = document.querySelector('.design--container__1');
-const getFillTitle = document.querySelector('.js-fill-title');
-const getShareTitle = document.querySelector('.js-share-title');
+// const getDesignTitle = document.querySelector('.design--container__1');
+// const getFillTitle = document.querySelector('.js-fill-title');
+// const getShareTitle = document.querySelector('.js-share-title');
+// const getDesignSection = document.querySelector('.design--container__2');
+// const getFillSection = document.querySelector('.js-fill--div');
+// const getShareSection = document.querySelector('.js-share--div');
+
+// function handleCollapsables(ev) {
+//   ev.currentTarget.classList.toggle('.hidden');
+// }
+
+// getDesignTitle.addEventListener('click', handleArrows, handleCollapsables);
+// getFillTitle.addEventListener('click', handleArrows, handleCollapsables);
+// getShareTitle.addEventListener('click', handleArrows, handleCollapsables);
