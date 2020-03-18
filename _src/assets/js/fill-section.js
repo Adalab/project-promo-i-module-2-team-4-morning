@@ -119,5 +119,7 @@ function addPalette3() {
 //   clientData.tel = clientData.tel.value;
 //   clientData.linkedin = clientData.linkedin.value;
 //   clientData.github = clientData.github.value;
-//   localStorage.setItem('User info', JSON.stringify(clientData));
+//   return localStorage.setItem('User info', JSON.stringify(clientData));
 // }
+
+// setData();
