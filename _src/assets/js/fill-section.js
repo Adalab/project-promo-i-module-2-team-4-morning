@@ -81,10 +81,7 @@ function addPalette1() {
   previewData.name.classList.add('title--palette-1');
   previewData.name.classList.remove('title--palette-2', 'title--palette-3');
   previewData.job.classList.add('subtitle--palette-1');
-  previewData.job.classList.remove(
-    'subtitle--palette-2',
-    'subtitle--palette-3'
-  );
+  previewData.job.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
   for (let i = 0; i < linksCard.length; i++) {
     linksCard[i].classList.add('link--palette-1');
     linksCard[i].classList.remove('link--palette-2', 'link--palette-3');
@@ -95,10 +92,7 @@ function addPalette2() {
   previewData.name.classList.add('title--palette-2');
   previewData.name.classList.remove('title--palette-1', 'title--palette-3');
   previewData.job.classList.add('subtitle--palette-2');
-  previewData.job.classList.remove(
-    'subtitle--palette-1',
-    'subtitle--palette-3'
-  );
+  previewData.job.classList.remove('subtitle--palette-1', 'subtitle--palette-3');
   for (let i = 0; i < linksCard.length; i++) {
     linksCard[i].classList.add('link--palette-2');
     linksCard[i].classList.remove('link--palette-1', 'link--palette-3');
@@ -109,12 +103,21 @@ function addPalette3() {
   previewData.name.classList.add('title--palette-3');
   previewData.name.classList.remove('title--palette-1', 'title--palette-2');
   previewData.job.classList.add('subtitle--palette-3');
-  previewData.job.classList.remove(
-    'subtitle--palette-1',
-    'subtitle--palette-2'
-  );
+  previewData.job.classList.remove('subtitle--palette-1', 'subtitle--palette-2');
   for (let i = 0; i < linksCard.length; i++) {
     linksCard[i].classList.add('link--palette-3');
     linksCard[i].classList.remove('link--palette-1', 'link--palette-2');
   }
 }
+
+//LOCAL-STORAGE
+
+// function setData() {
+//   clientData.name = clientData.name.value;
+//   clientData.job = clientData.job.value;
+//   clientData.email = clientData.email.value;
+//   clientData.tel = clientData.tel.value;
+//   clientData.linkedin = clientData.linkedin.value;
+//   clientData.github = clientData.github.value;
+//   localStorage.setItem('User info', JSON.stringify(clientData));
+// }
