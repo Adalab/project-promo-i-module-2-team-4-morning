@@ -23,20 +23,26 @@
             </div>
         </header>
         <main class="main">
+            <section class="js-section"></section>
             <section class="card-sample">
                 <div class="card-sample--container">
                     <button class="js-card-sample--button card-sample--button"> <i class="far fa-trash-alt"></i> Reset</button>
                     <div class="card-sample--card">
                          <h2 class="card-sample--card__title js-card-sample--card__title ">         Nombre Apellido       </h2> 
                          <h3 class="card-sample--card__subtitle js-card-sample--card__subtitle">         Front-end developer       </h3> 
-                        <img src="./assets/images/preview-photo.jpg" alt="imagen de ejemplo" />
-                        <div class="card-sample--item"> <a class="card-sample--item__link1 js-card-sample--item__link" href="#"><i class="fas fa-mobile-alt"></i         ></a> 
+                        <img class="js-card-sample--card__img" src="./assets/images/preview-photo.jpg"
+                        alt="imagen de ejemplo" />
+                        <div class="card-sample--item"> <a class="card-sample--item__link1 js-card-sample--item__link js-tel-preview"
+                            href=""><i class="fas fa-mobile-alt"></i         ></a> 
                         </div>
-                        <div class="card-sample--item"> <a class="card-sample--item__link2 js-card-sample--item__link" href="#"><i class="far fa-envelope"></i         ></a> 
+                        <div class="card-sample--item"> <a class="card-sample--item__link2 js-card-sample--item__link js-email-preview"
+                            href=""><i class="far fa-envelope"></i         ></a> 
                         </div>
-                        <div class="card-sample--item"> <a class="card-sample--item__link3 js-card-sample--item__link" href="#"><i class="fab fa-linkedin-in"></i         ></a> 
+                        <div class="card-sample--item"> <a class="card-sample--item__link3 js-card-sample--item__link js-linkedin-preview"
+                            href=""><i class="fab fa-linkedin-in"></i         ></a> 
                         </div>
-                        <div class="card-sample--item"> <a class="card-sample--item__link4 js-card-sample--item__link" href="#"><i class="fab fa-github-alt"></i         ></a> 
+                        <div class="card-sample--item"> <a class="card-sample--item__link4 js-card-sample--item__link js-github-preview"
+                            href=""><i class="fab fa-github-alt"></i         ></a> 
                         </div>
                     </div>
                 </div>
@@ -54,8 +60,8 @@
                         <p class="design--subtitle">Colores</p>
                         <form class="js-form design--form" action="" method="GET">
                             <div class="design--form__item">
-                                <input type="radio" name="select-palette" class="js-radio-design-palette-1"
-                                />
+                                <input id="js-radio-design-palette-1" type="radio" name="select-palette"
+                                class="js-radio-design-palette-1" />
                                 <div class="design--palette1">
                                     <div class="design--palette1__colorA"></div>
                                     <div class="design--palette1__colorB"></div>
@@ -85,28 +91,32 @@
                 </section>
                 <section class="section--fill">
                     <!-- Titulo de seccion -->
-                    <div class="title"> <span class="title--icon1"><i class="far fa-keyboard"></i></span> 
-                         <h3 class="title--text">Rellena</h3>  <a class="title--icon2 show"><i class="js-arrow-fill fas fa-angle-up"></i     ></a> 
+                    <div class="title js-fill-title"> <span class="title--icon1"><i class="far fa-keyboard"></i></span> 
+                         <h3 class="title--text">Rellena</h3>  <a class="title--icon2 show"><i class="js-arrow fas fa-angle-up closed"></i></a> 
                     </div>
-                    <div class="js-fill--div">
+                    <div class="js-fill--div hidden">
                         <!-- Formulario -->
                         <form class="js-form form" action="/signup" method="post">
                             <!-- Nombre -->
                             <label for="form--name">Nombre completo <span class="form-object"> *</span>
 
                             </label>
-                            <input id="form--name" type="text" name="form--name" placeholder="Ej: Sally Jill"
-                            required />
+                            <input class="js-fill-name" id="form--name" type="text" name="form--name"
+                            placeholder="Ej: Sally Jill" required />
                             <!-- Puesto -->
                             <label for="form--job">Puesto <span class="form-object"> *</span>
 
                             </label>
-                            <input id="form--job" type="text" name="form--job" placeholder="Ej: Front-end unicorn"
-                            required />
+                            <input class="js-fill-job" id="form--job" type="text" name="form--job"
+                            placeholder="Ej: Front-end unicorn" required />
                             <!-- Boton para subir imagen -->
                             <label for="form--img">Imagen de perfil<span class="form-object"> *</span>
 
                             </label>
+                            <div class="form--file">
+                                <input class="form--file__input js-fill-file" type="file" accept="image/png, .jpeg, .jpg, image/gif"
+                                />
+                            </div>
                             <div class="form--button__container">
                                 <button class="form--button">Añadir imagen</button> <span class="form--button__box"></span> 
                             </div>
@@ -114,47 +124,45 @@
                             <label for="form--email">Email <span class="form-object"> *</span>
 
                             </label>
-                            <input type="email" id="form--email" name="form--email" placeholder="Ej: sally-hill@gmail.com"
-                            required />
+                            <input class="js-fill-email" type="email" id="form--email" name="form--email"
+                            placeholder="Ej: sally-hill@gmail.com" required />
                             <!-- Telefono -->
                             <label for="form--phone">Teléfono <span class="form-object"> *</span>
 
                             </label>
-                            <input type="tel" id="form--phone" name="form--phone" placeholder="555-55-55-55"
-                            required />
+                            <input class="js-fill-tel" type="tel" id="form--phone" name="form--phone"
+                            placeholder="555-55-55-55" required />
                             <!-- Linkedin -->
                             <label for="form--linkedin">Linkedin <span class="form-object"> *</span>
 
                             </label>
-                            <input id="form--linkedin" type="text" name="form--linkedin" placeholder="Ej: linkedin.com/in/sally.hill"
-                            required />
+                            <input class="js-fill-linkedin" id="form--linkedin" type="text" name="form--linkedin"
+                            placeholder="Ej: linkedin.com/in/sally.hill" required />
                             <label for="form--job">Github<span class="form-object"> *</span>
 
                             </label>
-                            <input id="form--github" type="text" name="form--github" placeholder="Ej: @sally-hill"
-                            required />
+                            <input class="js-fill-github" id="form--github" type="text" name="form--github"
+                            placeholder="Ej: @sally-hill" required />
                         </form>
                     </div>
                 </section>
-                <!-- <div class="card-sample--item">           <a class="card-sample--item__link3" href="#"><i class="fab fa-linkedin-in"></i></a>         </div>         <div class="card-sample--item">           <a class="card-sample--item__link4" href="#"><i class="fab fa-github-alt"></i></a>         </div> -->
                 <section class="section--share">
                     <!-- Titulo de seccion -->
-                    <div class="share"> <span class="share--icon1"><i class="fas fa-share-alt"></i></span> 
+                    <div class="share js-share-title"> <span class="share--icon1"><i class="fas fa-share-alt"></i></span> 
                         <h3
                         class="share--text">
-                            </i>Comparte</h3> <a class="share--icon2"><i class="js-arrow-share fas fa-angle-up"></i></a> 
+                            </i>Comparte</h3> <a class="share--icon2"><i class="js-arrow fas fa-angle-up closed"></i></a> 
                     </div>
                     <!-- Boton -->
-                    <div class="js-share--div">
+                    <div class="js-share--div hidden">
                         <div class="share--button__container">
-                            <button class="share--button"> <i class="far fa-address-card"></i> Crear tarjeta</button>
+                            <button class="share--button js-btn"> <i class="far fa-address-card"></i> Crear tarjeta</button>
                         </div>
                         <!-- Tarjeta Creada -->
-                        <div class="share--card--created">
+                        <div class="share--card--created js-card-created hidden">
                             <div class="share--card--created--text">La tarjeta ha sido creada</div>
                             <div class="share--card--created--awesome-prof">url creada</div>
-                            <div class="share--card--created--button__container"></div>
-                            <button class="share--card--created--button"><i class="fab fa-twitter"></i> Compartir en twitter</button>
+                            <div class="share--card--created--button__container"></div> <a class="share--card--created--button" href="https://twitter.com/intent/tweet?text=Hey!%20Mira%20que%20tarjeta%20he%20creado"><i class="fab fa-twitter"></i> Compartir en twitter</a> 
                         </div>
                     </div>
                     </div>
