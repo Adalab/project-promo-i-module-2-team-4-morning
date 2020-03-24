@@ -12,7 +12,7 @@ let clientData = {
   job: '',
   imgURL: '',
   email: '',
-  phone: 0,
+  phone: '',
   linkedin: '',
   github: ''
 };
@@ -70,7 +70,7 @@ const linkedinPreview = getInputSelector('.js-linkedin-preview');
 const githubPreview = getInputSelector('.js-github-preview');
 
 //Pinta en el preview
-function paintForm(ev) {
+function paintForm() {
   if (clientData.name === '') {
     namePreview.innerHTML = 'Nombre Apellido';
   } else {
@@ -151,6 +151,16 @@ function addPalette3() {
     linksCard[i].classList.remove('link--palette-1', 'link--palette-2');
   }
 }
+
+function addValues() {
+  name.value = clientData.name;
+  job.value = clientData.job;
+  email.value = clientData.email;
+  phone.value = clientData.phone;
+  github.value = clientData.github;
+  linkedin.value = clientData.linkedin;
+}
+
 getFromLS();
 
 //Local Storage
@@ -162,6 +172,7 @@ function getFromLS() {
   }
   paintForm();
   paintPaletteLS();
+  addValues();
 }
 
 function setInLS() {

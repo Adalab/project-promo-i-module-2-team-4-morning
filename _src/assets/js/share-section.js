@@ -34,7 +34,7 @@ name.addEventListener('keyup', handleButton);
 job.addEventListener('keyup', handleButton);
 img.addEventListener('change', handleButton);
 email.addEventListener('keyup', handleButton);
-tel.addEventListener('keyup', handleButton);
+phone.addEventListener('keyup', handleButton);
 linkedin.addEventListener('keyup', handleButton);
 github.addEventListener('keyup', handleButton);
 

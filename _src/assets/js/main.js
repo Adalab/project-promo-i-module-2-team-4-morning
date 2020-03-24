@@ -9,8 +9,7 @@ const buttonReset = document.querySelector('.js-card-sample--button');
 
 function confirmReset() {
   Swal.fire({
-    html:
-      ' <h2 class="swal2-title" id="swal2-title" style="display: flex; font-size:1.25em; font-family: merriweather;">Se van a borrar los cambios, ¿está seguro?</h2>',
+    html: ' <h2 class="swal2-title" id="swal2-title" style="display: flex; font-size:1.25em; font-family: merriweather;">Se van a borrar los cambios, ¿está seguro?</h2>',
     width: 400,
     showCancelButton: true,
     cancelButtonColor: '#CB4335',
@@ -33,7 +32,7 @@ function resetForm() {
   clientData.job = '';
   clientData.imgURL = '';
   clientData.email = '';
-  clientData.phone = 0;
+  clientData.phone = '';
   clientData.linkedin = '';
   clientData.github = '';
   name.value = '';
