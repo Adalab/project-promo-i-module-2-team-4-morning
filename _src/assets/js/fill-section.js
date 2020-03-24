@@ -28,6 +28,18 @@ let previewData = {
   github: document.querySelector('.js-github-preview')
 };
 
+function getInputValue(selector){
+  let clientData = {
+    palette: [selectPalette1, selectPalette2, selectPalette3],
+    name: document.querySelector('.js-fill-name'),
+    job: document.querySelector('.js-fill-job'),
+    imgURL: document.querySelector('.js-fill-file'),
+    email: document.querySelector('.js-fill-email'),
+    tel: document.querySelector('.js-fill-tel'),
+    linkedin: document.querySelector('.js-fill-linkedin'),
+    github: document.querySelector('.js-fill-github')
+  };
+}
 function paintForm(ev) {
   if (clientData.name.value === '') {
     previewData.name.innerHTML = 'Nombre Apellido';
