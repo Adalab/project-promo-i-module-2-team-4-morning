@@ -6,7 +6,6 @@
 'use strict';
 
 const buttonReset = document.querySelector('.js-card-sample--button');
-document.getElementById('js-radio-design-palette-1').checked = true;
 
 function confirmReset() {
   Swal.fire({

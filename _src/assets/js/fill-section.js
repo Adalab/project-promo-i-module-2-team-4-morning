@@ -7,7 +7,7 @@
 'use strict';
 
 let clientData = {
-  pallete: [],
+  palette: 0,
   name: '',
   job: '',
   imgURL: '',
@@ -18,9 +18,9 @@ let clientData = {
 };
 
 //Recoge los input de fill
-const palleteA = getInputSelector('.js-radio-design-palette-1');
-const palleteB = getInputSelector('.js-radio-design-palette-2');
-const palleteC = getInputSelector('.js-radio-design-palette-3');
+const paletteA = getInputSelector('.js-radio-design-palette-1');
+const paletteB = getInputSelector('.js-radio-design-palette-2');
+const paletteC = getInputSelector('.js-radio-design-palette-3');
 const name = getInputSelector('.js-fill-name');
 const job = getInputSelector('.js-fill-job');
 const img = getInputSelector('.js-fill-file');
@@ -40,6 +40,7 @@ function inputHandler(ev) {
   clientData.github = github.value;
   paintForm();
   setInLS();
+  console.log(clientData);
 }
 
 //recoge selectores
@@ -48,9 +49,9 @@ function getInputSelector(selector) {
 }
 
 //añade listeners
-palleteA.addEventListener('change', paintColorsPalette);
-palleteB.addEventListener('change', paintColorsPalette);
-palleteC.addEventListener('change', paintColorsPalette);
+paletteA.addEventListener('change', paintColorsPalette);
+paletteB.addEventListener('change', paintColorsPalette);
+paletteC.addEventListener('change', paintColorsPalette);
 name.addEventListener('keyup', inputHandler);
 job.addEventListener('keyup', inputHandler);
 img.addEventListener('change', inputHandler);
@@ -91,10 +92,28 @@ function paintColorsPalette(event) {
   const currentTarget = event.currentTarget;
   if (currentTarget.classList.contains('js-radio-design-palette-1')) {
     addPalette1();
+    clientData.palette = 1;
   } else if (currentTarget.classList.contains('js-radio-design-palette-2')) {
     addPalette2();
+    clientData.palette = 2;
   } else if (currentTarget.classList.contains('js-radio-design-palette-3')) {
     addPalette3();
+    clientData.palette = 3;
+  }
+  setInLS();
+  console.log(clientData);
+}
+
+function paintPaletteLS() {
+  if (clientData.palette === 1 || clientData.palette === 0) {
+    addPalette1();
+    document.querySelector('.js-radio-design-palette-1').checked = true;
+  } else if (clientData.palette === 2) {
+    addPalette2();
+    document.querySelector('.js-radio-design-palette-2').checked = true;
+  } else if (clientData.palette === 3) {
+    addPalette3();
+    document.querySelector('.js-radio-design-palette-3').checked = true;
   }
 }
 
@@ -142,6 +161,7 @@ function getFromLS() {
     clientData = LSData;
   }
   paintForm();
+  paintPaletteLS();
 }
 
 function setInLS() {
