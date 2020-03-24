@@ -27,56 +27,23 @@ function confirmReset() {
 }
 
 function resetForm() {
-  if ((previewData.name.innerHTML = '')) {
-    clientData.name.value != '';
-  } else {
-    previewData.name.innerHTML = 'Nombre Apellido';
-    clientData.name.value = '';
-  }
-  if ((previewData.job.innerHTML = '')) {
-    clientData.job.value != '';
-  } else {
-    previewData.job.innerHTML = 'Front-end developer';
-    clientData.job.value = '';
-  }
-  if ((previewData.email.setAttribute = '')) {
-    clientData.email.value != '';
-  } else {
-    previewData.email.value = '';
-    clientData.email.value = '';
-  }
-  if ((previewData.tel.setAttribute = '')) {
-    clientData.tel.value != '';
-  } else {
-    previewData.tel.value = '';
-    clientData.tel.value = '';
-  }
-  if ((previewData.linkedin.setAttribute = '')) {
-    clientData.linkedin.value != '';
-  } else {
-    previewData.linkedin.value = '';
-    clientData.linkedin.value = '';
-  }
-  if ((previewData.github.setAttribute = '')) {
-    clientData.github.value != '';
-  } else {
-    previewData.github.value = '';
-    clientData.github.value = '';
-  }
-  if (previewData.name.classList != 'title--palette-1') {
-    document.getElementById('js-radio-design-palette-1').checked = true;
-    previewData.name.classList.add('title--palette-1');
-    previewData.name.classList.remove('title--palette-2', 'title--palette-3');
-  }
-  if (previewData.job.classList != 'subtitle--palette-1') {
-    previewData.job.classList.add('subtitle--palette-1');
-    previewData.job.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
-  }
-  for (let i = 0; i < linksCard.length; i++) {
-    document.getElementById('js-radio-design-palette-1').checked = true;
-    linksCard[i].classList.add('link--palette-1');
-    linksCard[i].classList.remove('link--palette-2', 'link--palette-3');
-  }
+  clientData.palette = 0;
+  clientData.name = '';
+  clientData.job = '';
+  clientData.imgURL = '';
+  clientData.email = '';
+  clientData.tel = 0;
+  clientData.linkedin = '';
+  clientData.github = '';
+  name.value = '';
+  job.value = '';
+  email.value = '';
+  tel.value = '';
+  linkedin.value = '';
+  github.value = '';
+  setInLS();
+  paintForm();
+  paintPaletteLS();
 }
 
 buttonReset.addEventListener('click', confirmReset);
@@ -117,28 +84,3 @@ function hidShareSection(ev) {
 }
 
 getShareTitle.addEventListener('click', hidShareSection);
-
-// const arrows = document.querySelectorAll('.js-arrow');
-// console.log(arrows);
-
-// function handleArrows(ev) {
-//   for (let arrow of arrows) {
-//     arrow.classList.toggle('closed');
-//     return ev.currentTarget.arrowClose;
-//   }
-// }
-
-// const getDesignTitle = document.querySelector('.design--container__1');
-// const getFillTitle = document.querySelector('.js-fill-title');
-// const getShareTitle = document.querySelector('.js-share-title');
-// const getDesignSection = document.querySelector('.design--container__2');
-// const getFillSection = document.querySelector('.js-fill--div');
-// const getShareSection = document.querySelector('.js-share--div');
-
-// function handleCollapsables(ev) {
-//   ev.currentTarget.classList.toggle('.hidden');
-// }
-
-// getDesignTitle.addEventListener('click', handleArrows, handleCollapsables);
-// getFillTitle.addEventListener('click', handleArrows, handleCollapsables);
-// getShareTitle.addEventListener('click', handleArrows, handleCollapsables);
