@@ -41,9 +41,12 @@ function resetForm() {
   tel.value = '';
   linkedin.value = '';
   github.value = '';
+  const getCardCreated = document.querySelector('.js-card-created');
+  getCardCreated.classList.add('hidden');
   setInLS();
   paintForm();
   paintPaletteLS();
+  handleButton();
 }
 
 buttonReset.addEventListener('click', confirmReset);
@@ -84,7 +87,3 @@ function hidShareSection(ev) {
 }
 
 getShareTitle.addEventListener('click', hidShareSection);
-
-//Crear url tarjeta
-
-const jsonData = JSON.stringify(clientData);
