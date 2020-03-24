@@ -84,3 +84,7 @@ function hidShareSection(ev) {
 }
 
 getShareTitle.addEventListener('click', hidShareSection);
+
+//Crear url tarjeta
+
+const jsonData = JSON.stringify(clientData);
