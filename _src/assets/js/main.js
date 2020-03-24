@@ -10,8 +10,7 @@ document.getElementById('js-radio-design-palette-1').checked = true;
 
 function confirmReset() {
   Swal.fire({
-    html:
-      ' <h2 class="swal2-title" id="swal2-title" style="display: flex; font-size:1.25em; font-family: merriweather;">Se van a borrar los cambios, ¿está seguro?</h2>',
+    html: ' <h2 class="swal2-title" id="swal2-title" style="display: flex; font-size:1.25em; font-family: merriweather;">Se van a borrar los cambios, ¿está seguro?</h2>',
     width: 400,
     showCancelButton: true,
     cancelButtonColor: '#CB4335',
@@ -72,10 +71,7 @@ function resetForm() {
   }
   if (previewData.job.classList != 'subtitle--palette-1') {
     previewData.job.classList.add('subtitle--palette-1');
-    previewData.job.classList.remove(
-      'subtitle--palette-2',
-      'subtitle--palette-3'
-    );
+    previewData.job.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
   }
   for (let i = 0; i < linksCard.length; i++) {
     document.getElementById('js-radio-design-palette-1').checked = true;
@@ -102,7 +98,7 @@ function hidDesignSection(ev) {
 getDesignTitle.addEventListener('click', hidDesignSection);
 
 //OCULTA SECCIÓN FILL
-getFillTitle = document.querySelector('.js-fill-title');
+const getFillTitle = document.querySelector('.js-fill-title');
 const getFillSection = document.querySelector('.js-fill--div');
 
 function hidFillSection(ev) {

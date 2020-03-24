@@ -3,74 +3,89 @@
 //FILL SECTION
 
 // eslint-disable-next-line strict
-const selectPalette1 = document.querySelector('.js-radio-design-palette-1');
-const selectPalette2 = document.querySelector('.js-radio-design-palette-2');
-const selectPalette3 = document.querySelector('.js-radio-design-palette-3');
+
+'use strict';
 
 let clientData = {
-  palette: [selectPalette1, selectPalette2, selectPalette3],
-  name: document.querySelector('.js-fill-name'),
-  job: document.querySelector('.js-fill-job'),
-  imgURL: document.querySelector('.js-fill-file'),
-  email: document.querySelector('.js-fill-email'),
-  tel: document.querySelector('.js-fill-tel'),
-  linkedin: document.querySelector('.js-fill-linkedin'),
-  github: document.querySelector('.js-fill-github')
+  pallete: [],
+  name: '',
+  job: '',
+  imgURL: '',
+  email: '',
+  tel: 0,
+  linkedin: '',
+  github: ''
 };
 
-let previewData = {
-  name: document.querySelector('.js-card-sample--card__title'),
-  job: document.querySelector('.js-card-sample--card__subtitle'),
-  imgURL: document.querySelector('.js-card-sample--card__img'),
-  email: document.querySelector('.js-email-preview'),
-  tel: document.querySelector('.js-tel-preview'),
-  linkedin: document.querySelector('.js-linkedin-preview'),
-  github: document.querySelector('.js-github-preview')
-};
+//Recoge los input de fill
+const palleteA = getInputSelector('.js-radio-design-palette-1');
+const palleteB = getInputSelector('.js-radio-design-palette-2');
+const palleteC = getInputSelector('.js-radio-design-palette-3');
+const name = getInputSelector('.js-fill-name');
+const job = getInputSelector('.js-fill-job');
+const img = getInputSelector('.js-fill-file');
+const email = getInputSelector('.js-fill-email');
+const tel = getInputSelector('.js-fill-tel');
+const linkedin = getInputSelector('.js-fill-linkedin');
+const github = getInputSelector('.js-fill-github');
 
-function getInputValue(selector){
-  let clientData = {
-    palette: [selectPalette1, selectPalette2, selectPalette3],
-    name: document.querySelector('.js-fill-name'),
-    job: document.querySelector('.js-fill-job'),
-    imgURL: document.querySelector('.js-fill-file'),
-    email: document.querySelector('.js-fill-email'),
-    tel: document.querySelector('.js-fill-tel'),
-    linkedin: document.querySelector('.js-fill-linkedin'),
-    github: document.querySelector('.js-fill-github')
-  };
+function inputHandler(ev) {
+  // mete en el objeto lo que se escribe en los inputs
+  clientData.name = name.value;
+  clientData.job = job.value;
+  clientData.imgURL = img.value;
+  clientData.email = email.value;
+  clientData.tel = parseInt(tel.value);
+  clientData.linkedin = linkedin.value;
+  clientData.github = github.value;
+  paintForm();
+  setInLS();
 }
+
+//recoge selectores
+function getInputSelector(selector) {
+  return document.querySelector(selector);
+}
+
+//añade listeners
+palleteA.addEventListener('change', paintColorsPalette);
+palleteB.addEventListener('change', paintColorsPalette);
+palleteC.addEventListener('change', paintColorsPalette);
+name.addEventListener('keyup', inputHandler);
+job.addEventListener('keyup', inputHandler);
+img.addEventListener('change', inputHandler);
+email.addEventListener('keyup', inputHandler);
+tel.addEventListener('keyup', inputHandler);
+linkedin.addEventListener('keyup', inputHandler);
+github.addEventListener('keyup', inputHandler);
+
+//recoge los elementos de la preview
+const namePreview = getInputSelector('.js-card-sample--card__title');
+const jobPreview = getInputSelector('.js-card-sample--card__subtitle');
+const imgPreview = getInputSelector('.js-card-sample--card__img');
+const emailPreview = getInputSelector('.js-email-preview');
+const telPreview = getInputSelector('.js-tel-preview');
+const linkedinPreview = getInputSelector('.js-linkedin-preview');
+const githubPreview = getInputSelector('.js-github-preview');
+
+//Pinta en el preview
 function paintForm(ev) {
-  if (clientData.name.value === '') {
-    previewData.name.innerHTML = 'Nombre Apellido';
+  if (clientData.name === '') {
+    namePreview.innerHTML = 'Nombre Apellido';
   } else {
-    previewData.name.innerHTML = clientData.name.value;
+    namePreview.innerHTML = clientData.name;
   }
-  if (clientData.job.value === '') {
-    previewData.job.innerHTML = 'Front-end developer';
+  if (clientData.job === '') {
+    jobPreview.innerHTML = 'Front-end developer';
   } else {
-    previewData.job.innerHTML = clientData.job.value;
+    jobPreview.innerHTML = clientData.job;
   }
-  if (ev.currentTarget.classList.contains('js-fill-file')) {
-    previewData.imgURL.setAttribute('src', clientData.imgURL);
-  } else if (ev.currentTarget.classList.contains('js-fill-email')) {
-    previewData.email.setAttribute('href', `mailto: ${clientData.email.value}`);
-  } else if (ev.currentTarget.classList.contains('js-fill-tel')) {
-    previewData.tel.setAttribute('href', `tel: +34 ${clientData.tel.value}`);
-  } else if (ev.currentTarget.classList.contains('js-fill-linkedin')) {
-    previewData.linkedin.setAttribute('href', clientData.linkedin.value);
-  } else if (ev.currentTarget.classList.contains('js-fill-github')) {
-    previewData.github.setAttribute('href', clientData.github.value);
-  }
+  // imgPreview.setAttribute('src', clientData.imgURL);
+  emailPreview.setAttribute('href', `mailto: ${clientData.email}`);
+  telPreview.setAttribute('href', `tel: +34 ${clientData.tel}`);
+  linkedinPreview.setAttribute('href', clientData.linkedin);
+  githubPreview.setAttribute('href', clientData.github);
 }
-clientData.name.addEventListener('keyup', paintForm);
-clientData.job.addEventListener('keyup', paintForm);
-
-clientData.imgURL.addEventListener('change', paintForm);
-clientData.email.addEventListener('keyup', paintForm);
-clientData.tel.addEventListener('keyup', paintForm);
-clientData.linkedin.addEventListener('keyup', paintForm);
-clientData.github.addEventListener('keyup', paintForm);
 
 function paintColorsPalette(event) {
   const currentTarget = event.currentTarget;
@@ -83,20 +98,13 @@ function paintColorsPalette(event) {
   }
 }
 
-selectPalette1.addEventListener('change', paintColorsPalette);
-selectPalette2.addEventListener('change', paintColorsPalette);
-selectPalette3.addEventListener('change', paintColorsPalette);
-
 const linksCard = document.querySelectorAll('.js-card-sample--item__link');
 
 function addPalette1() {
-  previewData.name.classList.add('title--palette-1');
-  previewData.name.classList.remove('title--palette-2', 'title--palette-3');
-  previewData.job.classList.add('subtitle--palette-1');
-  previewData.job.classList.remove(
-    'subtitle--palette-2',
-    'subtitle--palette-3'
-  );
+  namePreview.classList.add('title--palette-1');
+  namePreview.classList.remove('title--palette-2', 'title--palette-3');
+  jobPreview.classList.add('subtitle--palette-1');
+  jobPreview.classList.remove('subtitle--palette-2', 'subtitle--palette-3');
   for (let i = 0; i < linksCard.length; i++) {
     linksCard[i].classList.add('link--palette-1');
     linksCard[i].classList.remove('link--palette-2', 'link--palette-3');
@@ -104,13 +112,10 @@ function addPalette1() {
 }
 
 function addPalette2() {
-  previewData.name.classList.add('title--palette-2');
-  previewData.name.classList.remove('title--palette-1', 'title--palette-3');
-  previewData.job.classList.add('subtitle--palette-2');
-  previewData.job.classList.remove(
-    'subtitle--palette-1',
-    'subtitle--palette-3'
-  );
+  namePreview.classList.add('title--palette-2');
+  namePreview.classList.remove('title--palette-1', 'title--palette-3');
+  jobPreview.classList.add('subtitle--palette-2');
+  jobPreview.classList.remove('subtitle--palette-1', 'subtitle--palette-3');
   for (let i = 0; i < linksCard.length; i++) {
     linksCard[i].classList.add('link--palette-2');
     linksCard[i].classList.remove('link--palette-1', 'link--palette-3');
@@ -118,15 +123,27 @@ function addPalette2() {
 }
 
 function addPalette3() {
-  previewData.name.classList.add('title--palette-3');
-  previewData.name.classList.remove('title--palette-1', 'title--palette-2');
-  previewData.job.classList.add('subtitle--palette-3');
-  previewData.job.classList.remove(
-    'subtitle--palette-1',
-    'subtitle--palette-2'
-  );
+  namePreview.classList.add('title--palette-3');
+  namePreview.classList.remove('title--palette-1', 'title--palette-2');
+  jobPreview.classList.add('subtitle--palette-3');
+  jobPreview.classList.remove('subtitle--palette-1', 'subtitle--palette-2');
   for (let i = 0; i < linksCard.length; i++) {
     linksCard[i].classList.add('link--palette-3');
     linksCard[i].classList.remove('link--palette-1', 'link--palette-2');
   }
+}
+getFromLS();
+
+//Local Storage
+
+function getFromLS() {
+  const LSData = JSON.parse(localStorage.getItem('Data'));
+  if (LSData !== null) {
+    clientData = LSData;
+  }
+  paintForm();
+}
+
+function setInLS() {
+  localStorage.setItem('Data', JSON.stringify(clientData));
 }
