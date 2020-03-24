@@ -12,7 +12,7 @@ let clientData = {
   job: '',
   imgURL: '',
   email: '',
-  tel: 0,
+  phone: 0,
   linkedin: '',
   github: ''
 };
@@ -25,7 +25,7 @@ const name = getInputSelector('.js-fill-name');
 const job = getInputSelector('.js-fill-job');
 const img = getInputSelector('.js-fill-file');
 const email = getInputSelector('.js-fill-email');
-const tel = getInputSelector('.js-fill-tel');
+const phone = getInputSelector('.js-fill-tel');
 const linkedin = getInputSelector('.js-fill-linkedin');
 const github = getInputSelector('.js-fill-github');
 
@@ -35,7 +35,7 @@ function inputHandler(ev) {
   clientData.job = job.value;
   clientData.imgURL = img.value;
   clientData.email = email.value;
-  clientData.tel = parseInt(tel.value);
+  clientData.phone = parseInt(phone.value);
   clientData.linkedin = linkedin.value;
   clientData.github = github.value;
   paintForm();
@@ -56,7 +56,7 @@ name.addEventListener('keyup', inputHandler);
 job.addEventListener('keyup', inputHandler);
 img.addEventListener('change', inputHandler);
 email.addEventListener('keyup', inputHandler);
-tel.addEventListener('keyup', inputHandler);
+phone.addEventListener('keyup', inputHandler);
 linkedin.addEventListener('keyup', inputHandler);
 github.addEventListener('keyup', inputHandler);
 
@@ -65,7 +65,7 @@ const namePreview = getInputSelector('.js-card-sample--card__title');
 const jobPreview = getInputSelector('.js-card-sample--card__subtitle');
 const imgPreview = getInputSelector('.js-card-sample--card__img');
 const emailPreview = getInputSelector('.js-email-preview');
-const telPreview = getInputSelector('.js-tel-preview');
+const phonePreview = getInputSelector('.js-tel-preview');
 const linkedinPreview = getInputSelector('.js-linkedin-preview');
 const githubPreview = getInputSelector('.js-github-preview');
 
@@ -83,7 +83,7 @@ function paintForm(ev) {
   }
   // imgPreview.setAttribute('src', clientData.imgURL);
   emailPreview.setAttribute('href', `mailto: ${clientData.email}`);
-  telPreview.setAttribute('href', `tel: +34 ${clientData.tel}`);
+  phonePreview.setAttribute('href', `tel: +34 ${clientData.phone}`);
   linkedinPreview.setAttribute('href', clientData.linkedin);
   githubPreview.setAttribute('href', clientData.github);
 }
